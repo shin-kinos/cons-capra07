@@ -98,7 +98,7 @@ Number`\t`Conservation score`\t`Composition of the site
 
 [e.g.] 
 
-
+<img width="939" alt="result" src="https://user-images.githubusercontent.com/83740080/140262519-1c379598-b429-42c9-a9b2-2599eb974f3f.png">
 
 ## References 
 1. Capra, John A., and Mona Singh. "Predicting functionally important residues from sequence conservation." Bioinformatics 23.15 (2007): 1875-1882.
