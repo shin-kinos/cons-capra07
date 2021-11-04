@@ -1,0 +1,492 @@
+>A0JNM6.1 RecName: Full=Lysozyme-like protein 1; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA----------------AGILALMGCL-VTVVEPKVY-TRCKLAKIFSRA
+SLDNYRGFSLGNWICMAYYESHYNTTAQTQ-LE-DGSTDYGIFQINSDTWCRSTKLQ---
+-EKNRCHVACSALMTDDLTDAIICAKKIVKET-------DGMNYWQGWKKNCEGRD-LSE
+WKKGCEVS------------------
+>A2AE20.1 RecName: Full=Sperm acrosome-associated protein 5; AltName: Full=Lysozyme-like protein 5; Flags: Precursor [Mus musculus]
+------------------------------------------------------------
+--------MKVC--------------SIVVVILAVLL-IAKLDAKIY-ERCELAKKLEEA
+GLDGFKGYTVGDWLCVAHYESGFDTSFVDH-NP-DGSSEYGIFQLNSAWWCNNGITP---
+-TQNLCNIDCNDLLNRHILDDIICAKRVASSH-------KSMKAWDSWTQHCAGHD-LSE
+WLKGCSVRLKT--------DSSYNNW
+>A6QQ77.1 RecName: Full=Sperm acrosome membrane-associated protein 3; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MEAGSWAPRRWPRPPGIVLLALASVLSSL-LSSGQARVY-SRCELARVLQDF
+GLEGYRGYSLADWICLAYFASGFNTGAVDH-EA-DGSTNSGIFQINSRKWCKNLNPN---
+-VPNLCQMYCSDLLNPNLKDTVICAMKITQEP-------QGLGSWEAWRHHCQGKD-LSD
+WVDGCEL-------------------
+>B6VH75.1 RecName: Full=Sperm acrosome membrane-associated protein 3; AltName: Full=Sperm protein reactive with antisperm antibodies; Short=Sperm protein reactive with ASA; Flags: Precursor [Canis lupus familiaris]
+------------------------------------------------------------
+--------MEARSWAPRGHLCPPGSMLLAFASLLGCL-LTSSQARVY-SRCELAKVLQDF
+GMEGYRGYTLADWVCLAYFTSGFNTAAVDH-EA-DGSTNNGIFQINSRKWCKNLNTE---
+-VPNVCQMYCSDLLNPNLKDTVICAMKITQQP-------QGLASWEAWRRHCQGKD-LTD
+WVDGCDL-------------------
+>B6VH76.1 RecName: Full=Sperm acrosome membrane-associated protein 3; AltName: Full=Sperm protein reactive with antisperm antibodies; Short=Sperm protein reactive with ASA; Contains: RecName: Full=Sperm acrosome membrane-associated protein 3, membrane for
+MVSALRRAPLIRVHSSPVSSP---------------SVSGP-QRLVSCLSSQSSALSQSG
+GGSTSAAGIEARSRALRRRWCPAGIMLLALVCLLSCL-LPSSEAKLY-GRCELARVLHDF
+GLDGYRGYSLADWVCLAYFTSGFNAAALDY-EA-DGSTNNGIFQINSRRWCSNLTPN---
+-VPNVCQMYCSDLLNPNLKDTVICAMKITQEP-------QGLGYWEAWRHHCQGKD-LTE
+WVDGCDF-------------------
+>C0HLB7.1 RecName: Full=Lysozyme 2; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Lucilia sericata]
+M-----------------------------------------------------------
+--------LKL----------------TLTILAAVLL-VTPAFGKVY-TRCSLAREMHTL
+---GVPKNQLARWTCIAEHESAYNTKAVGSMNS-NGSRDYGIFQINNYYWCSPPSGA---
+FSYNECKIKCADFLVDSIEPAVKCAQLVLRQ--------QGWSAWSTWK-YCDHT--LPS
+-IDDCF--------------------
+>C1IIX1.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Penaeus merguiensis]
+------------------------------------------------------------
+--------MRV-----------------LPLALLVGL-LAVSDAKVL-GKCEFARLLETR
+--YNLSRNDIKNWVCIAEFESSFNTAATNR-NR-NRSTDYGIFQINNKYWCGSD------
+YGKNVCGIPCSDLMSDDITAALRCAETVRRATERYRGRGKGYTAWVAYNSKCKKRD-LDQ
+YMAECWSRG----------SNSIFPF
+>D4ABW7.1 RecName: Full=Lysozyme-like protein 4; Short=Lysozyme-4; Flags: Precursor [Rattus norvegicus]
+------------------------------------------------------------
+--------MQL----------------YLVLLLISYL-LTPIGASIL-GRCVVAKKLYDG
+GLNYFEGYSLENWVCLAYFESKFNPSAVYE-NSRDGSTGFGLFQIRDNEWCDH-------
+-GKNLCSVSCTALLNPNLKDTIECAKKIVKGK-------QGMGAWPVWSRNCQLSDILDR
+WLDGCEL-------------------
+>D9J142.1 RecName: Full=Inactive lysozyme 1A; Flags: Precursor [Lucilia sericata]
+------------------------------------------------------------
+--------MKF----------------FIVLLAALAL-FTPAFGKTF-TRCSLAKEVYAL
+---GVPKSELPQWTCIAEHGSSYRTNVVGPTNS-NGSNDYGIFQINNYYWCQPANGR---
+FSYNECKLSCNDLLTDNISNSVKCARKIKSQ--------QGWTAWSTWK-YCSGS--LPS
+-INDCF--------------------
+>D9J143.1 RecName: Full=Lysozyme 1B; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Lucilia sericata]
+------------------------------------------------------------
+--------MKF---------------INFFVIALMAY-ANCAWAKTF-TRCSLARAMYAL
+---GVPKSELARWTCIAKYESHYRTHVVGPANT-DGSHDYGIFQINDRYWCKPSNGR---
+SSHNGCNVYCDDLLEDDISESVYCAQHVKSK--------QGWSAWTTWA-KCNGN--LPS
+-IDECF--------------------
+>G3XDT7.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Dromaius novaehollandiae]
+------------------------------------------------------------
+--------MKF-----------------FLILGFCLL-PLIAQGKVF-QRCELAAAMKKH
+GLSNYRGYSLGHWVCAAKYESNFNTAAINR-NR-DGSSDYGILQINSRWWCNDGRTS---
+GAKNLCKISCSALLSSDITASVNCAKRVVSDK-------NGMNAWVAWRNHCKGRD-VSQ
+WIRGCRV-------------------
+>O75951.1 RecName: Full=Lysozyme-like protein 6; Flags: Precursor [Homo sapiens]
+------------------------------------------------------------
+--------MTK----------------ALLIYLVSSF-LALNQASLI-SRCDLAQVLQLE
+DLDGFEGYSLSDWLCLAFVESKFNISKINE-NA-DGSFDYGLFQINSHYWCNDYKSY---
+-SENLCHVDCQDLLNPNLLAGIHCAKRIVSGA-------RGMNNWVEWRLHCSGRP-LFY
+WLTGCRLR------------------
+>P00697.2 RecName: Full=Lysozyme C-1; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Rattus norvegicus]
+------------------------------------------------------------
+--------MKA-----------------LLVLGFLLL-SASVQAKIY-ERCQFARTLKRN
+GMSGYYGVSLADWVCLAQHESNYNTQARNY-NPGDQSTDYGIFQINSRYWCNDGKTP---
+RAKNACGIPCSALLQDDITQAIQCAKRVVRDP-------QGIRAWVAWQRHCKNRD-LSG
+YIRNCGV-------------------
+>P00698.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; AltName: Full=Allergen Gal d IV; AltName: Allergen=Gal d 4; Flags: Precursor [Gallus gallus]
+------------------------------------------------------------
+--------MRS-----------------LLILVLCFL-PLAALGKVF-GRCELAAAMKRH
+GLDNYRGYSLGNWVCAAKFESNFNTQATNR-NT-DGSTDYGILQINSRWWCNDGRTP---
+GSRNLCNIPCSALLSSDITASVNCAKKIVSDG-------NGMNAWVAWRNRCKGTD-VQA
+WIRGCRL-------------------
+>P00705.1 RecName: Full=Lysozyme C-1; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Anas platyrhynchos]
+------------------------------------------------------------
+--------MKA-----------------LLTLVFCLL-PLAAQGKVY-SRCELAAAMKRL
+GLDNYRGYSLGNWVCAANYESGFNTQATNR-NT-DGSTDYGILQINSRWWCDNGKTP---
+RSKNACGIPCSVLLRSDITEAVRCAKRIVSDG-------DGMNAWVAWRNRCRGTD-VSK
+WIRGCRL-------------------
+>P00707.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Ortalis vetula]
+------------------------------------------------------------
+--------------------------------------------KIY-KRCELAAAMKRY
+GLDNYRGYSLGNWVCAARYESNYNTQATNR-NS-NGSTDYGILQINSRWWCNDGRTP---
+GTKNLCHISCSALMGADIAPSVRCAKRIVSDG-------DGMNAWVAWRKHCKGTD-VST
+WIKDCKL-------------------
+>P00708.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Columba livia]
+------------------------------------------------------------
+--------------------------------------------KDI-PRCELVKILRRH
+GFEGFVGKTVANWVCLVKHESGYRTTAFNN-NG-PNSRDYGIFQINSKYWCNDGKTR---
+GSKNACNINCSKLRDDNIADDIQCAKKIAREA-------RGLTPWVAWKKYCQGKD-LSS
+YVRGC---------------------
+>P00709.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; AltName: Full=Lysozyme-like protein 7; Flags: Precursor [Homo sapiens]
+------------------------------------------------------------
+--------MRF----------------FVPLFLVGIL-FPAILAKQF-TKCELSQLLKD-
+-IDGYGGIALPELICTMFHTSGYDTQAIVE-N--NESTEYGLFQISNKLWCKSSQVP---
+QSRNICDISCDKFLDDDITDDIMCAKKILDI--------KGIDYWLAHKALCTEK--LEQ
+WL--CEKL------------------
+>P00710.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein [Camelus dromedarius]
+------------------------------------------------------------
+--------------------------------------------KQF-TKCKLSDELKD-
+-MNGHGGITLAEWICIIFHMSGYDTETVVS-N--NGNREYGLFQINNKIWCRDNENL---
+QSRNICDISCDKFLDDDLTDDKMCAKKILDK--------EGIDYWLAHKPLCSEK--LEQ
+WQ--CEKW------------------
+>P00711.2 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; AltName: Allergen=Bos d 4; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MMS----------------FVSLLLVGIL-FHATQAEQL-TKCEVFRELKD-
+-LKGYGGVSLPEWVCTTFHTSGYDTQAIVQ-N--NDSTEYGLFQINNKIWCKDDQNP---
+HSSNICNISCDKFLDDDLTDDIMCVKKILDK--------VGINYWLAHKALCSEK--LDQ
+WL--CEKL------------------
+>P00713.2 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Cavia porcellus]
+------------------------------------------------------------
+--------MMS----------------FFPLLLVGIL-FPAVQAKQL-TKCALSHELND-
+-LAGYRDITLPEWLCIIFHISGYDTQAIVK-N--SDHKEYGLFQINDKDFCESSTTV---
+QSRNICDISCDKLLDDDLTDDIMCVKKILDI--------KGIDYWLAHKPLCSDK--LEQ
+WY--CEAQ------------------
+>P00714.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Rattus norvegicus]
+------------------------------------------------------------
+--------MMR----------------FVPLFLACIS-LPAFQATEF-TKCEVSHAIED-
+-MDGYQGISLLEWTCVLFHTSGYDSQAIVK-N--NGSTEYGLFQISNRNWCKSSEFP---
+ESENICDISCDKFLDDELADDIVCAKKIVAI--------KGIDYWKAHKPMCSEK--LEQ
+WR--CEKPGAPALVVPALNSETPVP-
+>P00716.2 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Oryctolagus cuniculus]
+------------------------------------------------------------
+--------MMP----------------LVPLLLVSIV-FPGIQATQL-TRCELTEKLKE-
+-LDGYRDISMSEWICTLFHTSGLDTKITVN-N--NGSTEYGIFQISDKLWCVSKQNP---
+QSKNICDTPCENFLDDNLTDDVKCAMKILDK--------EGIDHWLAHKPLCSEN--LEQ
+WV--CKK-------------------
+>P04421.2 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA-----------------LVILGFLFL-SVAVQGKVF-ERCELARTLKKL
+GLDGYKGVSLANWLCLTKWESSYNTKATNY-NPSSESTDYGIFQINSKWWCNDGKTP---
+NAVDGCHVSCRELMENDIAKAVACAKHIVSE--------QGITAWVAWKSHCRDHD-VSS
+YVEGCTL-------------------
+>P05105.2 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase; Flags: Precursor [Hyalophora cecropia]
+------------------------------------------------------------
+--------MTK----------------YVILLAVLAF-ALHCDAKRF-TRCGLVQELRRL
+---GFDETLMSNWVCLVENESGRFTDKIGKVNK-NGSRDYGLFQINDKYWCSKGTTP---
+--GKDCNVTCNQLLTDDISVAATCAKKIYKR--------HKFDAWYGWKNHCQHG--LPD
+-ISDC---------------------
+>P08334.2 RecName: Full=Alpha-lactalbumin A; AltName: Full=Lactose synthase B protein [Equus caballus]
+------------------------------------------------------------
+--------------------------------------------KQF-TKCELSQVLKS-
+-MDGYKGVTLPEWICTIFHSSGYDTQTIVK-N--NGKTEYGLFQINNKMWCRDNQIL---
+PSRNICGISCDKFLDDDLTDDVMCAKKILDS--------EGIDYWLAHKPLCSEK--LEQ
+WL--CEEL------------------
+>P08905.2 RecName: Full=Lysozyme C-2; AltName: Full=1,4-beta-N-acetylmuramidase C; AltName: Full=Lysozyme C type M; Flags: Precursor [Mus musculus]
+------------------------------------------------------------
+--------MKT-----------------LLTLGLLLL-SVTAQAKVY-ERCEFARTLKRN
+GMAGYYGVSLADWVCLAQHESNYNTRATNY-NRGDQSTDYGIFQINSRYWCNDGKTP---
+RAVNACGINCSALLQDDITAAIQCAKRVVRDP-------QGIRAWVAWRAHCQNRD-LSQ
+YIRNCGV-------------------
+>P11375.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Equus asinus]
+------------------------------------------------------------
+--------------------------------------------KVF-SKCELAHKLKAQ
+EMDGFGGYSLANWVCMAEYESNFNTRAFNG-KNANGSYDYGLFQLNSKWWCKDNKRS---
+-SSNACNIMCSKLLDDNIDDDISCAKRVVRDP-------KGMSAWKAWVKHCKDKD-LSE
+YLASCNL-------------------
+>P11941.2 RecName: Full=Lysozyme C II; AltName: Full=1,4-beta-N-acetylmuramidase C; AltName: Full=Lysozyme type II; Flags: Precursor [Oncorhynchus mykiss]
+------------------------------------------------------------
+--------MRA--------------------VVVLLL-VAVASAKVY-DRCELARALKAS
+GMDGYAGNSLPNWVCLSKWESSYNTQATNR-NT-DGSTDYGIFQINSRYWCDDGRTP---
+GAKNVCGIRCSQLLTADLTVAIRCAKRVVLDP-------NGIGAWVAWRLHCQNQD-LRS
+YVAGCGV-------------------
+>P12069.2 RecName: Full=Lysozyme C-3; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Sus scrofa]
+------------------------------------------------------------
+--------MKT-----------------LLVLALLLL-SVSVQAKVY-DRCEFARILKKS
+GMDGYRGVSLANWVCLAKWESNFNTKATNY-NPGSQSTDYGIFQINSRYWCNDGKTP---
+KAVNACHISCKVLLDDDLSQDIECAKRVVRDP-------QGIKAWVAWKAHCQNKD-VSQ
+YIRGCKL-------------------
+>P16973.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Oryctolagus cuniculus]
+------------------------------------------------------------
+--------------------------------------------KIY-ERCELARTLKKL
+GLDGYKGVSLANWMCLAKWESSYNTRATNY-NPGDKSTDYGIFQINSRYWCNDGKTP---
+RAVNACHIPCSDLLKDDITQAVACAKRVVSDP-------QGIRAWVAWRNHCQNQD-LTP
+YIRGCGV-------------------
+>P18137.2 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Sus scrofa]
+------------------------------------------------------------
+--------MMS----------------FVSLLVVGIL-FPAIQAKQF-TKCELSQVLKD-
+-MDGYGDITLPEWICTIFHISGYDTKTIVH-D--NGSTEYGLFQINNKLWCRDNQI----
+QSKNICGISCDKFLDDDLTDDMMCAKKILDN--------EGIDYWLAHKALCSEK--LDQ
+WL--CEKM------------------
+>P21776.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Pseudocheirus peregrinus]
+------------------------------------------------------------
+--------------------------------------------SKM-KKCEFAKIAKEQ
+HMDGYHGVSLADWVCLVNNESDFNTKAINR-NK-------GI------------------
+------------------------------------------------------------
+--------------------------
+>P29615.1 RecName: Full=Lysozyme P; AltName: Full=1,4-beta-N-acetylmuramidase P; Flags: Precursor [Drosophila melanogaster]
+------------------------------------------------------------
+--------MKA----------------FLVICALTLT-AVATQARTM-DRCSLAREMSKL
+---GVPRDQLAKWTCIAQHESSFRTGVVGPANS-NGSNDYGIFQINNKYWCKPADGR---
+FSYNECGLSCNALLTDDITNSVKCARKIQRQ--------QGWTAWSTWK-YCSGS--LPS
+-INSCF--------------------
+>P29752.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Mus musculus]
+------------------------------------------------------------
+--------MMH----------------FVPLFLVCILSLPAFQATEL-TKCKVSHAIKD-
+-IDGYQGISLLEWACVLFHTSGYDTQAVVN-D--NGSTEYGLFQISDRFWCKSSEFP---
+ESENICGISCDKLLDDELDDDIACAKKILAI--------KGIDYWKAYKPMCSEK--LEQ
+WR--CEKP------------------
+>P30201.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Macaca mulatta]
+------------------------------------------------------------
+--------MKA-----------------VIILGLVLL-SVTVQGKIF-ERCELARTLKRL
+GLDGYRGISLANWVCLAKWESNYNTQATNY-NPGDQSTDYGIFQINSHYWCNNGKTP---
+GAVNACHISCNALLQDNIADAVTCAKRVVSDP-------QGIRAWVAWRNHCQNRD-VSQ
+YVQGCGV-------------------
+>P30805.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein [Ornithorhynchus anatinus]
+------------------------------------------------------------
+--------------------------------------------RIF-QICELSRVLKEN
+GLGGFHGVSLEEWLCVIFHESGYDSQALNY-Y--NGSSSHGLFQINQPYWCDDXDSESTE
+PSVNACQIPCSKLLDDDILDDIECAKKIVKEP-------KGITAWEAWQPFCNSD--LDQ
+WK--C---------------------
+>P37156.1 RecName: Full=Lysozyme C I; AltName: Full=1,4-beta-N-acetylmuramidase C [Tachyglossus aculeatus aculeatus]
+------------------------------------------------------------
+--------------------------------------------KIL-KKQELCKNLVAQ
+GMNGYQHITLPNWVCTAFHESSYNTRATNH-NT-DGSTDYGILQINSRYWCHDGKTP---
+GSKNACNISCSKLLDDDITDDLKCAKKIAGEA-------KGLTPWVAWKSKCRGHD-LSK
+FK--C---------------------
+>P37159.2 RecName: Full=Lysozyme E; AltName: Full=1,4-beta-N-acetylmuramidase E; Flags: Precursor [Drosophila melanogaster]
+------------------------------------------------------------
+--------MKA----------------FIVLVALAMA-APAL-GRTL-DRCSLAREMSNL
+---GVPRDQLARWACIAEHESSYRTGVVGPENY-NGSNDYGIFQINNYYWCAPPSGR---
+FSYNECGLSCNALLTDDITHSVRCAQKVLSQ--------QGWSAWSTWH-YCSGW--LPS
+-IDGCF--------------------
+>P37160.2 RecName: Full=Lysozyme S; AltName: Full=1,4-beta-N-acetylmuramidase S; Flags: Precursor [Drosophila melanogaster]
+------------------------------------------------------------
+--------MKA----------------FFALVLLAIA-APALAGRTL-DRCSLAREMADL
+---GVPRDQLDKWTCIAQHESDYRTWVVGPANS-DGSNDYGIFQINDLYWCQ-ADGR---
+FSYNECGLSCNALLTDDITNSVRCAQKVLSQ--------QGWSAWAVWH-YCSGW--LPS
+-IDECF--------------------
+>P37161.2 RecName: Full=Lysozyme X; AltName: Full=1,4-beta-N-acetylmuramidase X; Flags: Precursor [Drosophila melanogaster]
+------------------------------------------------------------
+--------MRA----------------LLGICVLALV-TPAVLGRTM-DRCSLAREMANM
+---GVSRDQLSKWACIAEHESSYRTGVVGPPNT-DGSNDYGIFQINDMYWCQPSSGK---
+FSHNGCDVSCNALLTDDIKSSVRCALKVLGQ--------QGWSAWSTWH-YCSGY--LPP
+-IDDCFV-------------------
+>P37712.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase [Camelus dromedarius]
+------------------------------------------------------------
+--------------------------------------------KVW-ERCALARKLKEL
+GMDGYRGVSLANWMCLTKWESDYNTDATNY-NPSSESTDYGIFQINSRYWCNNGKTP---
+HAVNGCGINCNVLLEDDITKAVQCAKRVVRDP-------QGVRAWVAWKNHCEGHD-VEQ
+YVEGCDL-------------------
+>P48816.1 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase; Flags: Precursor [Bombyx mori]
+------------------------------------------------------------
+--------MQK-----------------LIIFALVVL-CVGSEAKTF-TRCGLVHELRKH
+---GFEENLMRNWVCLVEHESSRDTSKTNT-NR-NGSKDYGLFQINDRYWCSKGASP---
+--GKDCNVKCSDLLTDDITKAAKCAKKIYKR--------HRFDAWYGWKNHCQGS--LPD
+-ISSC---------------------
+>P50717.1 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase; Flags: Precursor [Hyphantria cunea]
+------------------------------------------------------------
+--------MQK---------------LAVFLFAIAAV-CIHCEAKYYSTRCDLVRELRKQ
+---GFPENQMGDWVCLVENESGRKTDKVGPVNK-NGSKDYGLFQINDKYWCSNTRTP---
+--GKDCNVTCADLLLDDITKASTCAKKIFKR--------HNFRAWYGWRNHCDGKT-LPD
+-TSNC---------------------
+>P50718.1 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase; Flags: Precursor [Trichoplusia ni]
+------------------------------------------------------------
+--------MQK---------------LRVFLLALAAL-CISCEAKYFATNCELVHELRRQ
+---GFPEDKMRDWVCLIQNESGRNTSKMGTINK-NGSRDYGLFQINDKYWCSKTSTP---
+--GKDCNVTCAEMLLDDITKASKCAKKIYKR--------HKFQAWYGWRNHCQGT--LPD
+-ISKC---------------------
+>P51782.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Trichosurus vulpecula]
+------------------------------------------------------------
+--------MKV-----------------LLLLGFIFC-SMAAHGKRM-ERCEFARRIKQL
+HLDGYHQISLANWVCLAQWESGFDTKATNY-NPGDQSTDYGILQINSHYWCDDGKTP---
+HAANECKVRCSELQEDDLVKAVNCAKKIV-DQ-------QGIRAWVAWRNKCEGKD-LSK
+YLEGCHL-------------------
+>P61626.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Homo sapiens] >P61627.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Pan paniscus] >P61628.1 RecName: Full=Lysoz
+------------------------------------------------------------
+--------MKA-----------------LIVLGLVLL-SVTVQGKVF-ERCELARTLKRL
+GMDGYRGISLANWMCLAKWESGYNTRATNY-NAGDRSTDYGIFQINSRYWCNDGKTP---
+GAVNACHLSCSALLQDNIADAVACAKRVVRDP-------QGIRAWVAWRNRCQNRD-VRQ
+YVQGCGV-------------------
+>P61944.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Takifugu rubripes]
+------------------------------------------------------------
+--------MKI--------------------PVFLLL-LALANAKVF-QRCEWARVLKAR
+GMDGYRGISLADWVCLSKWESQYNTNAINH-NT-DGSTDYGIFQINSRWWCNDDRIP---
+-TRNACNIKCSALQTDDVTVAINCAKRVVSDP-------QGIRAWVAWNRHCQNRD-LSA
+YIAGCGL-------------------
+>P67977.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Semnopithecus entellus] >P67978.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Trachypithecus vetulus]
+------------------------------------------------------------
+--------MKA-----------------LTILGLVLL-SVTVQGKIF-ERCELARTLKKL
+GLDGYKGVSLANWVCLAKWESGYNTEATNY-NPGDESTDYGIFQINSRYWCNNGKTP---
+GAVDACHISCSALLQNNIADAVACAKRVVSDP-------QGIRAWVAWRNHCQNKD-VSQ
+YVKGCGV-------------------
+>P79158.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Callithrix jacchus]
+------------------------------------------------------------
+--------MKV-----------------LIILGLVLL-SVMVQGKVF-ERCELARTLKRF
+GLDGYRGISLANWMCLAKWESDYNTRATNY-NPGDQSTDYGIFQINSHYWCNNGRTP---
+GAVNACHISCNALLQDDITEAVACAKRVVRDP-------QGIRAWVAWKAHCQNRD-VSQ
+YVQGCGV-------------------
+>P80189.4 RecName: Full=Lysozyme C, non-stomach isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA-----------------LLILGLLLF-SVAVQGKVF-ERCELARSLKRF
+GMDNFRGISLANWMCLARWESNYNTQATNY-NAGDQSTDYGIFQINSHWWCNDGKTP---
+GAVNACHLPCGALLQDDITQAVACAKRVVSDP-------QGIRAWVAWRSHCQNQD-LTS
+YIQGCGV-------------------
+>P81646.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein [Tachyglossus aculeatus aculeatus]
+------------------------------------------------------------
+--------------------------------------------KVF-EKCELSQMLKAN
+GLDGFQGITLEEWICIAFHESGFDSRALNY-Y--NGSSSHGLFQINRQYWCDGQDAKSTE
+PSVNACQISCDKLRDDDIEDDIKCVKKILKES-------QGITAWEAWQPFCIAD--LDQ
+WK--C---------------------
+>P81708.1 RecName: Full=Lysozyme C, milk isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C [Canis lupus familiaris]
+------------------------------------------------------------
+--------------------------------------------KIF-SKCELARKLKSM
+GMDGFHGYSLANWVCMAEYESNFNTQAFNG-RNSNGSSDYGIFQLNSKWWCKSNSHS---
+-SANACNIMCSKFLDDNIDDDIACAKRVVKDP-------NGMSAWVAWVKHCKGKD-LSK
+YLASCNL-------------------
+>P81709.1 RecName: Full=Lysozyme C, spleen isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C [Canis lupus familiaris]
+------------------------------------------------------------
+--------------------------------------------KIF-ERCELARTLKNL
+GLAGYKGVSLANWVCLAKWESNYNTRATNY-NPGSKSTDYGIFQINSRYWCNDGKTP---
+RAVNACHISCSALLQDDITQAVACAKRVVSDP-------NGIRAWVAWRAHCENRD-VSQ
+YVRNCGV-------------------
+>P81710.1 RecName: Full=Lysozyme C, spleen isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C [Equus caballus]
+------------------------------------------------------------
+--------------------------------------------KVF-ERXELARTLKRL
+GLDGFRGVSLPNXVXLAR------------------------------------------
+------------------------------------------------------------
+--------------------------
+>P82174.2 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase [Galleria mellonella]
+------------------------------------------------------------
+--------------------------------------------KTF-TRCELVQALRRQ
+---GFDEAKLRDWVCLVENESRGRTDIVGKPNK-NGSRDYGLFQINDKYWCSNTSKA---
+--GKDCNITCSQLLTDDITVASKCAKKVYKR--------HNFMAWYGWRNHCQNKP-LPD
+-ISKC---------------------
+>P84492.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Chelonia mydas]
+------------------------------------------------------------
+--------------------------------------------KTY-ERCELARAMKRL
+GLDGYWGYSLGHWVCAAKYESNFNTGATNY-NPGDQSTDYGILQINSRWWCNDGKTP---
+RTKNACKIQCRELLTADITASVNCAKRVVRDP-------NGMGAWVAWTKNCKGRD-VSP
+WIRDCGL-------------------
+>P85045.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bufo gargarizans andrewsi]
+------------------------------------------------------------
+----------S-----------------GKYISWEDS-CSYLQLQKY-ERCELAKALKKG
+GLADFKGYSLENWICTAFHESGYNTASTNY-NPPDKSTDYGIFQINSRWWCNDYKTP---
+RSKNTCNIDCKVLLGDDISPAIKCAKRVVSDP-------NGMGAWVAWKKYCKGKN-LSQ
+WTQGCKL-------------------
+>Q05820.1 PUTATIVE PSEUDOGENE: RecName: Full=Putative lysozyme C-2; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Rattus norvegicus]
+------------------------------------------------------------
+--------MKA-----------------LLVLGFLLL-SASVQAKVF-KHCELARILRSS
+ALAGYRGVSLENWMCMAQHESNFDTEAINY-NSTDQSTDYGIFQINSRYWCNDGKTP---
+RAVNACGIPCSALLQDDITQAIQCAKRVVRDP-------QGIRAWVAWQRHCQNRD-LSG
+YIRNCGV-------------------
+>Q06655.2 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Notamacropus eugenii]
+------------------------------------------------------------
+--------MMS----------------LLSLLLLGIA-LPATQAIDY-RKCQASQILKEH
+GMD--KVIPLPELVCTMFHISGLSTQAEVN-N--HSNKEYGIFQISNNGWCAEKQED---
+VANSVCGILCSKFLDDDITDDIECAKKILQLP-------EGLGYWKAHETFCIED--LDQ
+WR--C---------------------
+>Q17005.2 RecName: Full=Lysozyme c-1; AltName: Full=1,4-beta-N-acetylmuramidase; Flags: Precursor [Anopheles gambiae]
+------------------------------------------------------------
+--------MKV---------------FSTVLLAIVAC-CAVAEAKTF-GKCELAKALANN
+---GIAKASLPDWVCLVQNESAFSTSATNK-NK-NGSTDYGIFQINNKYWCDSGY-----
+-GSNDCKIACKNLLNDDITDDIKCAKLIHKR--------HGFNAWYGWKNHCNGKK-LPN
+-VSSCF--------------------
+>Q27996.1 RecName: Full=Lysozyme C, tracheal isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA-----------------LLILGLLLL-SVAVQGKTF-KRCELAKTLKNL
+GLAGYKGVSLANWMCLAKGESNYNTQAKNY-NPGSKSTDYGIFQINSKWWCNDGKTP---
+KAVNGCGVSCSALLKDDITQAVACAKKIVSQ--------QGITAWVAWKNKCRNRD-LTS
+YVKGCGV-------------------
+>Q29145.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Trichosurus vulpecula]
+------------------------------------------------------------
+--------MMS----------------LLPLLLIGIV-LPATQAKDY-GKCELNQILRER
+GVD--KVISLPELICTMFHSSGFSTETEVD-N--NNHKEYGIFQISSNGWCAEKQED---
+VERSVCGILCSKLLDDDITDDIVCAKKILQLP-------ERLDHWKAHNTFCREN--LDQ
+WN--C---------------------
+>Q29RT1.1 RecName: Full=Lysozyme-like protein 6; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MTS----------------PLLISLASCL-VAVNQASLI-GRCDLAKVLHQE
+DLDGFEGYSLTDWLCLAFVESDFNITKVNE-NT-DGSFDYGIFQINSHYWCNDYQSR---
+-TENNCQVDCQELLSPNLLAIINCAKKIVSGA-------GGMKNWVKWRLHCAGRP-LSY
+WMTGCHLA------------------
+>Q2T9N7.1 RecName: Full=Lysozyme-like protein 4; Short=Lysozyme-4; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA----------------SVVLSLIGYL-VVPSDTAVL-GRCVVAKKLHEG
+GLSDFEGYSLENWVCLAYFESKFNPMAVYE-NSRSDFIGYGLFQIRNHDWCDH-------
+-GRNRCHMSCSALLNPDLKKTIECAKTIVKGK-------RGMGAWPSWTLNCQHSDTLAR
+WLDGCKL-------------------
+>Q32PD6.1 RecName: Full=Sperm acrosome-associated protein 5; AltName: Full=Lysozyme-like protein 5; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MQVS--------------GTIVV---ILM-AANVEAKIY-ERCDLAKKLEAA
+GLNGFKGYTIGDWLCMAHYESGFDTSFVNH-NP-DGSSEYGIFQLNSAWWCYNGVTP---
+-SENLCHMDCHELLNRHILDDIMCAKKVVSSE-------SGMSAWDSWNQHCYGYD-LSE
+WLRGCHMNAKP--------NKKIIS-
+>Q659U0.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Leptonychotes weddellii]
+------------------------------------------------------------
+--------MKA-----------------PLLLGLLLL-SVTVQGKVF-ERCDLARTLKRL
+GLAGFKGVSLANWMCLAKWESDYNTKATNY-NPGSRSTDYGIFQINSRYWCNDGKTP---
+RAVNSCHIPCSDLLKDDITQAVACAKRVVSDP-------NGIRAWVAWRAHCENQD-VSQ
+YVRNCGV-------------------
+>Q6B410.1 RecName: Full=Lysozyme C, intestinal isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA-----------------VLILGLLLL-SVTVQGKKF-EKCELARTLRRY
+GLDGYKGVSLANWMCLTYGESRYNTRVTNY-NPGSKSTDYGIFQINSKWWCNDGKTP---
+KAVNGCGVSCSAMLKDDITQAVACAKTIVSR--------QGITAWVAWKNKCRNRD-VSS
+YIRGCKL-------------------
+>Q6B411.1 RecName: Full=Lysozyme C, milk isozyme; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Bos taurus]
+------------------------------------------------------------
+--------MKA-----------------LLIVGLLLL-SVAVQGKKF-QRCELARTLKKL
+GLDGYRGVSLANWVCLARWESNYNTRATNY-NRGDKSTDYGIFQINSRWWCNDGKTP---
+KAVNACRIPCSALLKDDITQAVACAKRVVRDP-------QGIKAWVAWRNKCQNRD-LRS
+YVQGCRV-------------------
+>Q6UWQ5.2 RecName: Full=Lysozyme-like protein 1; Flags: Precursor [Homo sapiens]
+------------------------------------------------------------
+--------MKA----------------AGILTLIGCL-VTGAESKIY-TRCKLAKIFSRA
+GLDNYWGFSLGNWICMAYYESGYNTTAQTV-LD-DGSIDYGIFQINSFAWCRRGKLK---
+-ENNHCHVACSALITDDLTDAIICARKIVKET-------QGMNYWQGWKKHCEGRD-LSE
+WKKGCEVS------------------
+>Q7LZQ1.3 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; AltName: Full=Softshell turtle lysozyme C; Short=SSTL [Pelodiscus sinensis]
+------------------------------------------------------------
+-------------------------------------------GKIY-EQCELAREFKRH
+GMDGYHGYSLGDWVCTAKHESNFNTAATNY-NRGDQSTDYGILQINSRWWCNDGKTP---
+KAKNACGIECSELLKADITAAVNCAKRIVRDP-------NGMGAWVAWTKYCKGKD-VSQ
+WIKGCKL-------------------
+>Q7LZQ2.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C [Aix sponsa]
+------------------------------------------------------------
+--------------------------------------------KVY-ERCELAAAMKRL
+GLDNYRGYSLGNWVCAAKYESNFNTQATNR-NT-DGSTDYGILEINSRWWCNDGKTP---
+GAKNVCGIPCSVLLRSDITEAVKCAKRIVSDG-------NGMNAWVAWRNRCKGTD-VSR
+WIRGCRL-------------------
+>Q7SID7.1 RecName: Full=Lysozyme; AltName: Full=1,4-beta-N-acetylmuramidase [Antheraea mylitta]
+------------------------------------------------------------
+--------------------------------------------KRF-TRCGLVNELRKQ
+---GFDENLMRDWVCLVENESARYTDKIANVNK-NGSRDYGLFQINDKYWCSKGSTP---
+--GKDCNVTCSQLLTDDITVASTCAKKIYKR--------TKFDAWSGWDNHCNHS--NPD
+-ISSC---------------------
+>Q91159.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Opisthocomus hoazin]
+------------------------------------------------------------
+--------MLF----------------FGFLLAFLSA-VPGTEGEII-PRCELVKILREH
+GFEGFEGTTIADWICLVQHESDYNTEAYNN-N--GPSRDYGIFQINSKYWCNDGKTS---
+GAVDGCHISCSELMTNDLEDDIKCAKKIARDA-------HGLTPWYGWKNHCEGRD-LSS
+YVKGC---------------------
+>Q96KX0.1 RecName: Full=Lysozyme-like protein 4; Short=Lysozyme-4; Flags: Precursor [Homo sapiens]
+------------------------------------------------------------
+--------MKA----------------SVVLSLLGYL-VVPSGAYIL-GRCTVAKKLHDG
+GLDYFEGYSLENWVCLAYFESKFNPMAIYE-NTREGYTGFGLFQMRGSDWCGD-------
+HGRNRCHMSCSALLNPNLEKTIKCAKTIVKGK-------EGMGAWPTWSRYCQYSDTLAR
+WLDGCKL-------------------
+>Q96QH8.1 RecName: Full=Sperm acrosome-associated protein 5; AltName: Full=Lysozyme-like protein 5; AltName: Full=Sperm-specific lysozyme-like protein X; Short=SLLP-X; Flags: Precursor [Homo sapiens]
+------------------------------------------------------------
+--------MKAW--------------GTVVVTLATLM-VVTVDAKIY-ERCELAARLERA
+GLNGYKGYGVGDWLCMAHYESGFDTAFVDH-NP-DGSSEYGIFQLNSAWWCDNGITP---
+-TKNLCHMDCHDLLNRHILDDIRCAKQIVSSQ-------NGLSAWTSWRLHCSGHD-LSE
+WLKGCDMHVKI--------DPKIHP-
+>Q9CPX3.1 RecName: Full=Lysozyme-like protein 1; Flags: Precursor [Mus musculus]
+------------------------------------------------------------
+--------MKS----------------VGVFALIISF-SIVAESKIY-TRCKLAKIFAKA
+GLDNYGGFALGNWLCMAYYESHYNTTAENV-LE-DGSTDYGIFQINSFTWCRNARKH---
+-QKNHCHVACSALITDDLTDAILCAKKIVKET-------QGMNYWQGWKKNCENKD-MSE
+WKRGCEVS------------------
+>Q9D9X8.2 RecName: Full=Sperm acrosome membrane-associated protein 3; AltName: Full=Lysozyme-like protein 3; AltName: Full=Sperm lysozyme-like protein 1; Short=mSLLP1; Contains: RecName: Full=Sperm acrosome membrane-associated protein 3, membrane form; Co
+MGICMSMYTQVLV---PVDADGDHHILWSRFYERWGSCFNPCAGLVNCLPPHSSALYL--
+-----CHRMEARSRAPRRQLCPPGITWLALAYLLSCL-LASSKAKVF-SRCELAKEMHDF
+GLDGYRGYNLADWVCLAYYTSGFNTNAVDH-EA-DGSTNNGIFQISSRRWCRTLASN---
+-GPNLCRIYCTDLLNNDLKDSIVCAMKIVQEP-------LGLGYWEAWRHHCQGRD-LSD
+WVDGCDF-------------------
+>Q9DA11.1 RecName: Full=Lysozyme-like protein 6; Flags: Precursor [Mus musculus]
+------------------------------------------------------------
+--------MLK----------------ALFICVASCL-LVVNDGNII-HRCSLAKILYEE
+DLDGFEGYSLPDWLCLAFVESNFNISKVNE-NV-DGSFDYGIFQINSRYWCNDYQSH---
+-SENFCHVDCQELLSPNLISTIHCAKKIVSGP-------GGMKNWVEWKLHCLGRP-LSY
+WMTGCHLG------------------
+>Q9DD65.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Paralichthys olivaceus]
+------------------------------------------------------------
+--------MRT--------------------LVVLLL-VAVANARVY-ERCEWARLLRNQ
+GMDGYRGISLANWVCLTEWESHYNTRATNH-NT-DGSTDYGIFQINSRWWCNDSQTP---
+-TSNACNIRCSELLTDDVIVAIKCAKRVVRDP-------NGIGAWVAWRQHCQGQD-LSS
+YLAGCGL-------------------
+>Q9N2G9.1 RecName: Full=Alpha-lactalbumin; AltName: Full=Lactose synthase B protein; Flags: Precursor [Canis lupus familiaris]
+------------------------------------------------------------
+--------MMS----------------FVSLLLVSIL-FPAIQAKQF-TKCELPQVLKD-
+-MDGFGGIALPEWICTIFHTSGYDTQTIVN-N--NGGTDYGLFQISNKFWCKDDQNL---
+QSRNICDISCDKFLDDDLTDDMICAKKILDK--------EGIDYWLAHKPLCSEK--LEQ
+WR--CEKL------------------
+>Q9PU28.1 RecName: Full=Lysozyme C; AltName: Full=1,4-beta-N-acetylmuramidase C; Flags: Precursor [Scophthalmus maximus]
+------------------------------------------------------------
+--------MRC--------------------LLLLLL-VPVPGAKVF-ERCEWARLLKRN
+GMSNYRGISLADWVCLSQWESSYNTRATNR-NT-DGSTDYGIFQINSRWWCDNGQTP---
+-TSNACGISCSALLTDDVGAAIICAKHVVRDP-------NGIGAWVAWKRHCQGQD-LSS
+YVAGCGV-------------------
