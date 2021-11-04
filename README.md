@@ -47,7 +47,7 @@ This program supports two types of sequence weighting:
 ### Gap penalty 
 The gap penalties are given as follows:
 
-<img width="1440" alt="image02_cons-re" src="https://user-images.githubusercontent.com/83740080/137862202-11f40bdb-8650-4c19-b8ba-172faaad7393.png">
+<img width="1440" alt="equation_seq_weighting" src="https://user-images.githubusercontent.com/83740080/140261784-a8acc7c0-95d6-48f1-9787-23b5d1d5aa9b.png">
 
 where ***L*** is the length of a site (or number of the sequences in the MSA) and ***Wj*** is the weighting factor of sequence ***j***. The gap penalty of site ***i*** is given by calculating sum of weighting factors assigned to the gaps in sequence ***j***. 
 
