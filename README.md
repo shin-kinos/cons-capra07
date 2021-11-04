@@ -32,7 +32,7 @@ Then the object file is generated in `./target/release` directory.
 ### Conservation score 
 The conservation score is calculated based on JSD as follows: 
 
-(Fumula)
+<img width="1440" alt="equation_capra07" src="https://user-images.githubusercontent.com/83740080/140261527-b32ce48d-c198-4c64-9a3d-1a03b25a1f75.png">
 
 where ***Pc*** is a site distribution, ***q*** is a background distribution, ***r = (Pc + q) / 2*** and ***RE*** is the Relative Entropy (RE). 
 
