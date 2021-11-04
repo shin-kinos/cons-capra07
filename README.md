@@ -1,4 +1,4 @@
-# cons-capra06 
+# cons-capra07 
 A Rust program that calculates conservation score a site in a Multiple Sequence Alignment (MSA) using Jensen-Shannon divergence. 
 
 ## Description 
