@@ -4,7 +4,7 @@ use std::f64;
 
 /*
  * Symbol frequency.
- * This variable is also used in "entropy::relative_entropy()".
+ * This variable is also used in "entropy::js_divergence()".
  */
 pub static mut SYMBOL : Vec<char> = Vec::new();
 
@@ -13,7 +13,7 @@ pub fn seq_weight( seq_list : &Vec<String>, site_list : &Vec<String>, arg_w : &S
 	/* Amino acid list for Position-Based mothod. */
 	unsafe { SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect(); }
 
-	if *arg_w == "va"  { weight_va( seq_list ) }
+	if *arg_w == "va"  { weight_va( seq_list )        }
 	else               { weight_henikoff( site_list ) }
 
 }

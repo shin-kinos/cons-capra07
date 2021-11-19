@@ -4,7 +4,12 @@ use std::io::Write;
 use colored::*;
 use crate::error;
 
-pub fn show_result( site_list : &Vec<String>, cons_capra07_list : &Vec<f64>, arg_c : &String )
+pub fn show_result
+(
+	site_list         : &Vec<String>,
+	cons_capra07_list : &Vec<f64>,
+	arg_c             : &String
+)
 {
 	if ( *site_list ).len() != ( *cons_capra07_list ).len() { error::error_bomb( "site_ent_len_not_same" ); }
 
@@ -20,11 +25,11 @@ pub fn show_result( site_list : &Vec<String>, cons_capra07_list : &Vec<f64>, arg
 		println!( "{}",              "Negative (D, E)".on_truecolor(255,  37,  37).truecolor(0,   0,   0) );
 		println!( "{}", "Special conformations (G, P)".on_truecolor(255,   0, 255).truecolor(0,   0,   0) );
 		*/
-		println!( "{}", "Aliphatic (A, V, L, I, M, C)".on_yellow().black() );
-		println!( "{}",        "Aromatic (F, W, Y, H)".on_cyan().black() );
-		println!( "{}",           "Polar (S, T, N, Q)".on_green().black() );
-		println!( "{}",              "Positive (K, R)".on_blue().black() );
-		println!( "{}",              "Negative (D, E)".on_red().black() );
+		println!( "{}", "Aliphatic (A, V, L, I, M, C)".on_yellow().black()  );
+		println!( "{}",        "Aromatic (F, W, Y, H)".on_cyan().black()    );
+		println!( "{}",           "Polar (S, T, N, Q)".on_green().black()   );
+		println!( "{}",              "Positive (K, R)".on_blue().black()    );
+		println!( "{}",              "Negative (D, E)".on_red().black()     );
 		println!( "{}", "Special conformations (G, P)".on_magenta().black() );
 		println!( "" );
 
@@ -46,7 +51,12 @@ pub fn show_result( site_list : &Vec<String>, cons_capra07_list : &Vec<f64>, arg
 	}
 }
 
-pub fn save_result( site_list : &Vec<String>, cons_capra07_list : &Vec<f64>, arg_o : &String )
+pub fn save_result
+(
+	site_list         : &Vec<String>,
+	cons_capra07_list : &Vec<f64>,
+	arg_o             : &String
+)
 {
 	let mut fout = File::create( ( *arg_o ).as_str() ).expect( "FAILED to open output file" );
 
@@ -66,15 +76,15 @@ fn colorize( arg : &String )
 
 	for symbol in sequence.iter() {
 		match *symbol {
-			'A' | 'V' | 'L' | 'I' | 'M' | 'C' => print!( "{}", ( *symbol ).to_string().on_yellow().black() ),
-			'F' | 'W' | 'Y' | 'H'             => print!( "{}", ( *symbol ).to_string().on_cyan().black() ),
-			'S' | 'T' | 'N' | 'Q'             => print!( "{}", ( *symbol ).to_string().on_green().black() ),
-			'K' | 'R'                         => print!( "{}", ( *symbol ).to_string().on_blue().black() ),
-			'D' | 'E'                         => print!( "{}", ( *symbol ).to_string().on_red().black() ),
+			'A' | 'V' | 'L' | 'I' | 'M' | 'C' => print!( "{}", ( *symbol ).to_string().on_yellow().black()  ),
+			'F' | 'W' | 'Y' | 'H'             => print!( "{}", ( *symbol ).to_string().on_cyan().black()    ),
+			'S' | 'T' | 'N' | 'Q'             => print!( "{}", ( *symbol ).to_string().on_green().black()   ),
+			'K' | 'R'                         => print!( "{}", ( *symbol ).to_string().on_blue().black()    ),
+			'D' | 'E'                         => print!( "{}", ( *symbol ).to_string().on_red().black()     ),
 			'G' | 'P'                         => print!( "{}", ( *symbol ).to_string().on_magenta().black() ),
-			'B' | 'Z' | 'J' | 'O'             => print!( "{}", ( *symbol ).to_string().yellow() ),
-			'X'                               => print!( "{}", ( *symbol ).to_string().red() ),
-			_                                 => print!( "{}", ( *symbol ).to_string() ),
+			'B' | 'Z' | 'J' | 'O'             => print!( "{}", ( *symbol ).to_string().yellow()             ),
+			'X'                               => print!( "{}", ( *symbol ).to_string().red()                ),
+			_                                 => print!( "{}", ( *symbol ).to_string()                      ),
 		}
 	}
 }

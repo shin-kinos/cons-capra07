@@ -19,10 +19,10 @@ impl Options {
 
 		let mut arg_i : &String = &String::new();
 		let mut arg_o : &String = &String::new();
-		let mut arg_w : &String = &String::from( "hen" );
-		let mut arg_t : &String = &String::from( "yes" );
+		let mut arg_w : &String = &String::from( "hen"      );
+		let mut arg_t : &String = &String::from( "yes"      );
 		let mut arg_b : &String = &String::from( "blosum62" );
-		let mut arg_c : &String = &String::from( "no" );
+		let mut arg_c : &String = &String::from( "no"       );
 
 		if argc < 5 { show_usage( &argv[ 0 ] ) };
 
@@ -35,8 +35,8 @@ impl Options {
 				"-t" => { i += 1; arg_t = &argv[ i ]; }
 				"-b" => { i += 1; arg_b = &argv[ i ]; }
 				"-c" => { i += 1; arg_c = &argv[ i ]; }
-				"-h" => { show_usage( &argv[ 0 ] ); }
-				_    => { show_usage( &argv[ 0 ] ); }
+				"-h" => { show_usage( &argv[ 0 ] );   }
+				_    => { show_usage( &argv[ 0 ] );   }
 			}
 			i += 1;
 		}
@@ -83,12 +83,12 @@ impl Options {
 	{
 		println!( "\nParameter set :" );
 		println!( "===========================================" );
-		println!( "Input filename    : {}", self.input );
-		println!( "Onput filename    : {}", self.output );
-		println!( "Weighting method  : {}", self.weight );
-		println!( "Non-standard AA   : {}", self.tolerate );
-		println!( "B.G. distribution : {}", self.bgdist );
-		println!( "Colorize AA       : {}", self.colorize );
+		println!( "Input filename    : {}", self.input          );
+		println!( "Onput filename    : {}", self.output         );
+		println!( "Weighting method  : {}", self.weight         );
+		println!( "Non-standard AA   : {}", self.tolerate       );
+		println!( "B.G. distribution : {}", self.bgdist         );
+		println!( "Colorize AA       : {}", self.colorize       );
 		println!( "===========================================" );
 	}
 }
@@ -98,8 +98,12 @@ fn show_usage( arg : &String )
 	println!( "Usage: {} [Options] \n\nOptions :\n\n", *arg );
 	println!( "    -i    Input filename in aligned Multi-FASTA format, REQUIRED." );
 	println!( "    -o    Onput filename, REQUIRED." );
-	println!( "    -w    Method of sequence weighting ('hen' or 'va', default 'hen').\n              hen : Position-Based method by Henikoff and Henikoff\n              va  : Distance-Based method by Vingron and Argos" );
-	println!( "    -t    Tolerate non-standard AA types (such as B, Z and X) in input file ('yes' or 'no', default 'yes').\n              yes : All non-standard AAs are converted to gaps.\n              no  : The program halts if the input file includes non-standard AA types." ); 
+	println!( "    -w    Method of sequence weighting ('hen' or 'va', default 'hen').
+              hen : Position-Based method by Henikoff and Henikoff
+              va  : Distance-Based method by Vingron and Argos" );
+	println!( "    -t    Tolerate non-standard AA types (such as B, Z and X) in input file ('yes' or 'no', default 'yes').
+              yes : All non-standard AAs are converted to gaps.
+              no  : The program halts if the input file includes non-standard AA types." ); 
 	println!( "    -b    Back ground distribution in the relative entropy (default 'blosum62').
               blosum62  : BLOSUM62
               swissprot : Swiss-Prot

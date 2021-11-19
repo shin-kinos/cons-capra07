@@ -5,7 +5,14 @@ use std::f64;
 use crate::bgdistribution;
 use crate::weighting::SYMBOL;
 
-pub fn js_divergence( site_list : &Vec<String>, weight_list : &Vec<f64>, gap_pen_list : &Vec<f64>, arg_b : &String ) -> Vec<f64>
+pub fn js_divergence
+(
+	site_list    : &Vec<String>,
+	weight_list  : &Vec<f64>,
+	gap_pen_list : &Vec<f64>,
+	arg_b        : &String
+)
+-> Vec<f64>
 {
 	unsafe { 
 		/* 20 symbols to calculate relative entropy, ignoring gaps. */
@@ -23,14 +30,28 @@ pub fn js_divergence( site_list : &Vec<String>, weight_list : &Vec<f64>, gap_pen
 	let mut js_dive_list : Vec<f64> = vec![ 0.0; num_site ];
 
 	for i in 0 .. num_site {
-		let js_dive : f64 = calc_js_dive( &( *site_list )[ i ], weight_list, ( *gap_pen_list )[ i ], &q );
+		let js_dive : f64 = calc_js_dive
+		(
+			&( *site_list )[ i ],
+			weight_list,
+			( *gap_pen_list )[ i ],
+			&q
+		);
+
 		js_dive_list[ i ] += js_dive;
 	}
 
 	js_dive_list
 }
 
-fn calc_js_dive( site_arg : &String, weight_list : &Vec<f64>, gap_penalty : f64, q : &HashMap<char, f64> ) -> f64
+fn calc_js_dive
+(
+	site_arg    : &String,
+	weight_list : &Vec<f64>,
+	gap_penalty : f64,
+	q           : &HashMap<char, f64>
+)
+-> f64
 {
 	let site : Vec<char> = ( *site_arg ).chars().collect();
 	//println!( "site : {:?}", site );
@@ -72,18 +93,22 @@ fn calc_js_dive( site_arg : &String, weight_list : &Vec<f64>, gap_penalty : f64,
 		}
 	}
 
-	// re = re / ( 20 as f64 ).ln();
 	js_dive = 0.5 * js_dive;
 
-	/* Give the gap penalty */
+	/* Give gap penalty. */
 	js_dive = js_dive * gap_penalty;
 
-	//println!( "\nRelative entropy : {:.3}\n", re );
+	//println!( "\nJensen-Shannon divergence : {:.3}\n", js_dive );
 
 	js_dive
 }
 
-fn weighted_freq_count( site : &Vec<char>, weight_list : &Vec<f64> ) -> HashMap<char, f64>
+fn weighted_freq_count
+(
+	site        : &Vec<char>,
+	weight_list : &Vec<f64>
+)
+-> HashMap<char, f64>
 {
 	let len_site : usize = ( *site ).len();
 

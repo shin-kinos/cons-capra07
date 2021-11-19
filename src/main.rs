@@ -48,7 +48,12 @@ fn main()
 	}
 	*/
 
-	let weight_list : Vec<f64> = weighting::seq_weight( &( data.seq_list ), &( data.site_list ), &( opts.weight ) );
+	let weight_list : Vec<f64> = weighting::seq_weight
+	(
+		&( data.seq_list  ),
+		&( data.site_list ),
+		&( opts.weight    )
+	);
 
 	/*
 	println!( "\nSequence weighting :\n" );
@@ -66,7 +71,13 @@ fn main()
 	}
 	*/
 
-	let cons_capra07_list : Vec<f64> = entropy::js_divergence( &( data.site_list ), &weight_list, &gap_pen_list, &( opts.bgdist ) );
+	let cons_capra07_list : Vec<f64> = entropy::js_divergence
+	( 
+		&( data.site_list ),
+		&weight_list,
+		&gap_pen_list,
+		&( opts.bgdist )
+	);
 
 	/*
 	for i in 0 .. cons_capra07_list.len() {
@@ -75,10 +86,20 @@ fn main()
 	*/
 
 	/* Show result */
-	result::show_result( &( data.site_list ), &cons_capra07_list, &( opts.colorize ) );
+	result::show_result
+	(
+		&( data.site_list ),
+		&cons_capra07_list,
+		&( opts.colorize  )
+	);
 
 	/* Save result */
-	result::save_result( &( data.site_list ), &cons_capra07_list, &( opts.output ) );
+	result::save_result
+	(
+		&( data.site_list ),
+		&cons_capra07_list,
+		&( opts.output    )
+	);
 
 	println!( "{}", "\nProgram completed !!!\n".green() );
 
