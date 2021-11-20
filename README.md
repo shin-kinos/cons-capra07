@@ -2,7 +2,7 @@
 A Rust program that calculates conservation score a site in a Multiple Sequence Alignment (MSA) using Jensen-Shannon divergence. 
 
 ## Description 
-* This program scores residue conservation in each site of a MSA. 
+* This program scores residue conservation in each site on a MSA. 
 * The scoring measure is based on Jensen-Shannon divergence (JSD) applied by Capra and Singh [1]. 
 * It takes account of background distribution, sequence weighting and gap penalty. 
 
