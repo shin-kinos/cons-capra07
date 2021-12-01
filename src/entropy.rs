@@ -3,7 +3,10 @@ use std::collections::HashMap;
 use std::f64;
 
 use crate::bgdistribution;
-use crate::weighting::SYMBOL;
+//use crate::weighting::SYMBOL;
+
+/* Amino acid symbol list without gap. */
+static mut SYMBOL : Vec<char> = Vec::new();
 
 pub fn js_divergence
 (
@@ -11,33 +14,23 @@ pub fn js_divergence
 	weight_list  : &Vec<f64>,
 	gap_pen_list : &Vec<f64>,
 	arg_b        : &String
-)
--> Vec<f64>
+) -> Vec<f64>
 {
-	unsafe { 
-		/* 20 symbols to calculate relative entropy, ignoring gaps. */
-		SYMBOL.clear();
+	/* 20 amino acid symbols to calculate relative entropy, ignoring gaps. */
+	unsafe {
 		SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect();
-		SYMBOL.shrink_to_fit();
 		//println!( "{:?}", SYMBOL );
 	}
 
 	let num_site : usize = ( *site_list ).len();
 
-	/* Define q distribution ( background  distribution ) */
+	/* Define 'q' distribution ( background  distribution ) */
 	let q : HashMap<char, f64> = bgdistribution::define_bg_dist( arg_b );
 
 	let mut js_dive_list : Vec<f64> = vec![ 0.0; num_site ];
 
 	for i in 0 .. num_site {
-		let js_dive : f64 = calc_js_dive
-		(
-			&( *site_list )[ i ],
-			weight_list,
-			( *gap_pen_list )[ i ],
-			&q
-		);
-
+		let js_dive : f64 = calc_js_dive( &( *site_list )[ i ], weight_list, ( *gap_pen_list )[ i ], &q );
 		js_dive_list[ i ] += js_dive;
 	}
 
@@ -50,8 +43,7 @@ fn calc_js_dive
 	weight_list : &Vec<f64>,
 	gap_penalty : f64,
 	q           : &HashMap<char, f64>
-)
--> f64
+) -> f64
 {
 	let site : Vec<char> = ( *site_arg ).chars().collect();
 	//println!( "site : {:?}", site );
@@ -59,7 +51,7 @@ fn calc_js_dive
 	/* Make site distribution. */
 	let mut pc : HashMap<char, f64> = weighted_freq_count( &site, weight_list );
 
-	/* Modify site distributionls to take account of gap ignoring. */
+	/* Modify site distributions to take account of gap ignoring. */
 	unsafe {
 		let mut sum_weight : f64 = 0.0;
 		for aa in SYMBOL.iter() {
@@ -73,8 +65,8 @@ fn calc_js_dive
 	}
 
 	/*
-	 * Make r distribution.
-	 * r  = 1/2( pc + q )
+	 * Make 'r' distribution.
+	 * r  = ( pc + q ) / 2
 	 * pc = site distribution
 	 * q  = background distribution
 	*/
@@ -95,20 +87,15 @@ fn calc_js_dive
 
 	js_dive = 0.5 * js_dive;
 
-	/* Give gap penalty. */
+	/* Give the gap penalty */
 	js_dive = js_dive * gap_penalty;
 
-	//println!( "\nJensen-Shannon divergence : {:.3}\n", js_dive );
+	//println!( "\nJS divergence : {:.3}\n", re );
 
 	js_dive
 }
 
-fn weighted_freq_count
-(
-	site        : &Vec<char>,
-	weight_list : &Vec<f64>
-)
--> HashMap<char, f64>
+fn weighted_freq_count( site : &Vec<char>, weight_list : &Vec<f64> ) -> HashMap<char, f64>
 {
 	let len_site : usize = ( *site ).len();
 

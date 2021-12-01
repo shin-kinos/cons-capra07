@@ -6,8 +6,8 @@ pub fn weight_gap_penalty( site_list : &Vec<String>, weight_list : &Vec<f64> ) -
 
 	/*
 	 * Calculate simple gap penalties taking accont of sequence weighting.
-	 * num_site     = Number of the site
-	 * site         = A site
+	 * num_site = Number of the site
+	 * site     = A site
 	 * gap_pen_list = A list of gap penalties
 	*/
 	for i in 0 .. num_site {

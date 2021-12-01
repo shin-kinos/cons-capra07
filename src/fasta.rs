@@ -35,7 +35,7 @@ impl Fasta {
 				( self.title_list ).push( line.to_string() );
 			} else if line.starts_with( ">" ) && !segment.is_empty() {
 				( self.title_list ).push( line.to_string() );
-				( self.seq_list   ).push( segment.concat() );
+				( self.seq_list ).push( segment.concat() );
 				segment.clear();
 			} else {
 				segment.push( line.to_string() );
@@ -59,7 +59,7 @@ impl Fasta {
 		for i in 0 .. num_seq {
 			let sequence : &String = &( self.seq_list[ i ] );
 			if      *arg_t == "yes" { self.seq_list[ i ] = convert_to_gap( sequence, i + 1 ); }
-			else if *arg_t == "no"  { check_symbol( sequence, i + 1 );                        }
+			else if *arg_t == "no"  { check_symbol( sequence, i + 1 ); }
 		}
 
 		/**/
@@ -79,7 +79,7 @@ impl Fasta {
 		let num_seq  : usize = ( self.seq_list ).len();
 		let num_site : usize = ( self.seq_list[ 0 ] ).to_string().len();
 
-		println!( "Number of the sequences : {}", num_seq  );
+		println!( "Number of the sequences : {}", num_seq );
 		println!( "Number of the sites     : {}", num_site );
 
 		let mut site : Vec<String> = Vec::new();

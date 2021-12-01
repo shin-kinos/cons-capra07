@@ -1,15 +1,18 @@
 
 use std::collections::HashMap;
 
-use crate::weighting::SYMBOL;
+//use crate::weighting::SYMBOL;
+
+/* Amino acid symbol without gap. */
+static mut SYMBOL : Vec<char> = Vec::new();
 
 pub fn define_bg_dist( arg_b : &String ) -> HashMap<char, f64>
 {
-	/*
+	/* 20 symbols to calculate relative entropy, ignoring gaps. */
 	unsafe {
-		println!( "SYMBOL : {:?}", SYMBOL );
+		SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect();
+		//println!( "{:?}", SYMBOL );
 	}
-	*/
 
 	let mut _dist_list : Vec<f64> = Vec::new();
 

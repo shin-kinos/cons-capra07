@@ -81,7 +81,7 @@ impl Options {
 
 	pub fn show_parameter( &self )
 	{
-		println!( "\nParameter set :" );
+		println!( "\nParameter set :"                           );
 		println!( "===========================================" );
 		println!( "Input filename    : {}", self.input          );
 		println!( "Onput filename    : {}", self.output         );
@@ -113,7 +113,7 @@ fn show_usage( arg : &String )
               jtt       : JTT
               wag       : WAG
               lg        : LG
-              equal     : No background distribution, equal rate (= 0.05)" );
+              equal     : No background distribution with equal rate (= 0.05)" );
 	println!( "    -c    Colorize each AA displayed on the terminal based on their stereochemical properties ('yes' or 'no', default 'no')."  );
 	println!( "    -h    Print this help, ignore all other arguments." );
 	println!( "\n" );

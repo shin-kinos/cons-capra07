@@ -72,7 +72,7 @@ fn main()
 	*/
 
 	let cons_capra07_list : Vec<f64> = entropy::js_divergence
-	( 
+	(
 		&( data.site_list ),
 		&weight_list,
 		&gap_pen_list,
@@ -90,7 +90,7 @@ fn main()
 	(
 		&( data.site_list ),
 		&cons_capra07_list,
-		&( opts.colorize  )
+		&( opts.colorize )
 	);
 
 	/* Save result */
@@ -98,7 +98,7 @@ fn main()
 	(
 		&( data.site_list ),
 		&cons_capra07_list,
-		&( opts.output    )
+		&( opts.output )
 	);
 
 	println!( "{}", "\nProgram completed !!!\n".green() );
