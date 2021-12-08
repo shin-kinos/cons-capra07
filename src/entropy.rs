@@ -8,14 +8,13 @@ use crate::bgdistribution;
 /* Amino acid symbol list without gap. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn js_divergence
-(
+pub fn js_divergence(
 	site_list    : &Vec<String>,
 	weight_list  : &Vec<f64>,
 	gap_pen_list : &Vec<f64>,
 	arg_b        : &String
-) -> Vec<f64>
-{
+) -> Vec<f64> {
+
 	/* 20 amino acid symbols to calculate relative entropy, ignoring gaps. */
 	unsafe {
 		SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect();
@@ -37,18 +36,17 @@ pub fn js_divergence
 	js_dive_list
 }
 
-fn calc_js_dive
-(
+fn calc_js_dive(
 	site_arg    : &String,
 	weight_list : &Vec<f64>,
 	gap_penalty : f64,
 	q           : &HashMap<char, f64>
-) -> f64
-{
+) -> f64 {
+
 	let site : Vec<char> = ( *site_arg ).chars().collect();
 	//println!( "site : {:?}", site );
 
-	/* Make site distribution. */
+	/* Make pc distribution ( site distribution ). */
 	let mut pc : HashMap<char, f64> = weighted_freq_count( &site, weight_list );
 
 	/* Modify site distributions to take account of gap ignoring. */
@@ -95,8 +93,8 @@ fn calc_js_dive
 	js_dive
 }
 
-fn weighted_freq_count( site : &Vec<char>, weight_list : &Vec<f64> ) -> HashMap<char, f64>
-{
+fn weighted_freq_count( site : &Vec<char>, weight_list : &Vec<f64> ) -> HashMap<char, f64> {
+
 	let len_site : usize = ( *site ).len();
 
 	/* Define the pseudocount (10e-8). */

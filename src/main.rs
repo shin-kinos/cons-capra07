@@ -11,8 +11,8 @@ mod options;
 mod result;
 mod weighting;
 
-fn main()
-{
+fn main() {
+
 	println!( "\nCalculating conservation score a site in MSA by Jensen-Shannon divergence.\n" );
 	println!( "Capra, John A., and Mona Singh. \"Predicting functionally important residues from sequence conservation.\" Bioinformatics 23.15 (2007)." );
 
@@ -48,8 +48,7 @@ fn main()
 	}
 	*/
 
-	let weight_list : Vec<f64> = weighting::seq_weight
-	(
+	let weight_list : Vec<f64> = weighting::seq_weight(
 		&( data.seq_list  ),
 		&( data.site_list ),
 		&( opts.weight    )
@@ -71,8 +70,7 @@ fn main()
 	}
 	*/
 
-	let cons_capra07_list : Vec<f64> = entropy::js_divergence
-	(
+	let cons_capra07_list : Vec<f64> = entropy::js_divergence(
 		&( data.site_list ),
 		&weight_list,
 		&gap_pen_list,
@@ -86,16 +84,14 @@ fn main()
 	*/
 
 	/* Show result */
-	result::show_result
-	(
+	result::show_result(
 		&( data.site_list ),
 		&cons_capra07_list,
 		&( opts.colorize )
 	);
 
 	/* Save result */
-	result::save_result
-	(
+	result::save_result(
 		&( data.site_list ),
 		&cons_capra07_list,
 		&( opts.output )

@@ -6,9 +6,9 @@ use std::collections::HashMap;
 /* Amino acid symbol without gap. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn define_bg_dist( arg_b : &String ) -> HashMap<char, f64>
-{
-	/* 20 symbols to calculate relative entropy, ignoring gaps. */
+pub fn define_bg_dist( arg_b : &String ) -> HashMap<char, f64> {
+
+	/* 20 amino acid symbols, ignoring gaps. */
 	unsafe {
 		SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect();
 		//println!( "{:?}", SYMBOL );

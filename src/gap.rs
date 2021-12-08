@@ -1,6 +1,6 @@
 
-pub fn weight_gap_penalty( site_list : &Vec<String>, weight_list : &Vec<f64> ) -> Vec<f64>
-{
+pub fn weight_gap_penalty( site_list : &Vec<String>, weight_list : &Vec<f64> ) -> Vec<f64> {
+
 	let num_site : usize = ( *site_list ).len();
 	let mut gap_pen_list : Vec<f64> = vec![ 0.0; num_site ];
 
@@ -18,8 +18,8 @@ pub fn weight_gap_penalty( site_list : &Vec<String>, weight_list : &Vec<f64> ) -
 	gap_pen_list
 }
 
-fn gap_penalty( site : &String, weight_list : &Vec<f64> ) -> f64
-{
+fn gap_penalty( site : &String, weight_list : &Vec<f64> ) -> f64 {
+
 	let aa_list : Vec<char> = ( *site ).chars().collect();
 	let mut gap_sum : f64 = 0.0;
 

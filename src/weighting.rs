@@ -5,13 +5,12 @@ use std::f64;
 /* Symbol frequency with gaps. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn seq_weight
-(
+pub fn seq_weight(
 	seq_list  : &Vec<String>,
 	site_list : &Vec<String>,
 	arg_w     : &String
-) -> Vec<f64>
-{
+) -> Vec<f64> {
+
 	/* Amino acid list for Position-Based mothod. */
 	unsafe {
 		SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect();
@@ -27,8 +26,7 @@ pub fn seq_weight
 // POSITION-BASED METHOD
 ///////////////////////////////////////////////////////////////////////////
 
-fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64>
-{
+fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64> {
 
 	/* Number of the sequences and sites. */
 	let num_seq  : usize = ( *site_list )[ 0 ].len();
@@ -37,7 +35,7 @@ fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64
 	let mut weight_list : Vec<f64> = vec![ 0.0; num_seq ];
 
 	/*
-	 * Calculate weighting factor using position based method (Henikoff-Henikoff, 1994).
+	 * Calculate weighting factor using position based method ( Henikoff-Henikoff, 1994 ).
 	 * r             = Number of AA types in a site.
 	 * s             = Frequency of the AA in a site.
 	 * weight_factor = 1 / (r * s).
@@ -75,8 +73,8 @@ fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64
 	weight_list
 }
 
-fn count_types( arg_site : &String ) -> usize
-{
+fn count_types( arg_site : &String ) -> usize {
+
 	let mut count : HashMap<char, usize> = HashMap::new();
 
 	unsafe {
@@ -102,8 +100,8 @@ fn count_types( arg_site : &String ) -> usize
 	num_type
 }
 
-fn count_freq( arg_aa : char, arg_site : &String ) -> usize
-{
+fn count_freq( arg_aa : char, arg_site : &String ) -> usize {
+
 	let aa_list : Vec<char> = ( *arg_site ).chars().collect();
 	let mut freq : usize = 0;
 
@@ -122,8 +120,7 @@ fn count_freq( arg_aa : char, arg_site : &String ) -> usize
 // DISTANCE-BASED METHOD
 ///////////////////////////////////////////////////////////////////////////
 
-fn weight_va( seq_list : &Vec<String> ) -> Vec<f64>
-{
+fn weight_va( seq_list : &Vec<String> ) -> Vec<f64> {
 
 	/* Number of the sequences and sites. */
 	let num_seq  : usize = ( *seq_list ).len();
@@ -164,8 +161,8 @@ fn weight_va( seq_list : &Vec<String> ) -> Vec<f64>
 	weight_list
 }
 
-fn count_diff( seq_1 : &String, seq_2 : &String ) -> usize
-{
+fn count_diff( seq_1 : &String, seq_2 : &String ) -> usize {
+
 	let num_seq : usize = ( *seq_1 ).len();
 
 	let seq_1_vec : Vec<char> = ( *seq_1 ).chars().collect();
@@ -187,8 +184,8 @@ fn count_diff( seq_1 : &String, seq_2 : &String ) -> usize
 	counter
 }
 
-fn normalize( diff_list : &Vec<f64> ) -> Vec<f64>
-{
+fn normalize( diff_list : &Vec<f64> ) -> Vec<f64> {
+
 	let len_list : usize = ( *diff_list ).len();
 
 	let mut weight_norm : Vec<f64> = Vec::new();

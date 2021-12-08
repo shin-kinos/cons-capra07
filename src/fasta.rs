@@ -10,8 +10,8 @@ pub struct Fasta {
 }
 
 impl Fasta {
-	pub fn new() -> Fasta
-	{
+	pub fn new() -> Fasta {
+
 		let title_list : Vec<String> = Vec::new();
 		let seq_list   : Vec<String> = Vec::new();
 		let site_list  : Vec<String> = Vec::new();
@@ -23,8 +23,8 @@ impl Fasta {
 		}
 	}
 
-	pub fn read_fasta_info( &mut self, arg_i : &String )
-	{
+	pub fn read_fasta_info( &mut self, arg_i : &String ) {
+
 		let fin = read_to_string( ( *arg_i ).as_str() ).expect( "FAILED to open input file" );
 
 		/* Temporary String to conbine a sequence line separated by "\n" */
@@ -50,8 +50,8 @@ impl Fasta {
 		( self.site_list  ).shrink_to_fit();
 	}
 
-	pub fn check_fasta_info( &mut self, arg_t : &String )
-	{
+	pub fn check_fasta_info( &mut self, arg_t : &String ) {
+
 		let num_title : usize = ( self.title_list ).len();
 		let num_seq   : usize = ( self.seq_list   ).len();
 
@@ -74,8 +74,8 @@ impl Fasta {
 
 	}
 
-	pub fn get_site_list( &mut self )
-	{
+	pub fn get_site_list( &mut self ) {
+
 		let num_seq  : usize = ( self.seq_list ).len();
 		let num_site : usize = ( self.seq_list[ 0 ] ).to_string().len();
 
@@ -97,8 +97,8 @@ impl Fasta {
 
 }
 
-fn convert_to_gap( sequence : &String, seq_order : usize ) -> String
-{
+fn convert_to_gap( sequence : &String, seq_order : usize ) -> String {
+
 	let mut aa_list : Vec<char> = ( *sequence ).chars().collect();
 
 	for i in 0 .. aa_list.len() {
@@ -126,8 +126,8 @@ fn convert_to_gap( sequence : &String, seq_order : usize ) -> String
 	aa_list.iter().collect()
 }
 
-fn check_symbol( sequence : &String, seq_order : usize )
-{
+fn check_symbol( sequence : &String, seq_order : usize ) {
+
 	let aa_list : Vec<char> = ( *sequence ).chars().collect();
 
 	for i in 0 .. aa_list.len() {

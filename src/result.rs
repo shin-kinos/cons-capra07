@@ -4,13 +4,12 @@ use std::io::Write;
 use colored::*;
 use crate::error;
 
-pub fn show_result
-(
+pub fn show_result(
 	site_list         : &Vec<String>,
 	cons_capra07_list : &Vec<f64>,
 	arg_c             : &String
-)
-{
+) {
+
 	if ( *site_list ).len() != ( *cons_capra07_list ).len() { error::error_bomb( "site_ent_len_not_same" ); }
 
 	println!( "\nResult :\n" );
@@ -51,13 +50,12 @@ pub fn show_result
 	}
 }
 
-pub fn save_result
-(
+pub fn save_result(
 	site_list         : &Vec<String>,
 	cons_capra07_list : &Vec<f64>,
 	arg_o             : &String
-)
-{
+) {
+
 	let mut fout = File::create( ( *arg_o ).as_str() ).expect( "FAILED to open output file" );
 
 	writeln!( fout, "{}", "num\tcons\tsite" ).expect( "FAILED to write" );
@@ -69,8 +67,8 @@ pub fn save_result
 	println!( "\nThe output file was correctly written.\n" );
 }
 
-fn colorize( arg : &String )
-{
+fn colorize( arg : &String ) {
+
 	let sequence : Vec<char> = ( *arg ).chars().collect();
 	//println!("{:?}", sequence);
 
