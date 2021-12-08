@@ -2,8 +2,8 @@
 use std::process;
 use colored::*;
 
-pub fn error_bomb( arg : &str )
-{
+pub fn error_bomb( arg : &str ) {
+
 	println!( "{}", "\n!!! ERROR !!!\n".red() );
 
 	match arg {
