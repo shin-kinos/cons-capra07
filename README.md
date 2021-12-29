@@ -32,7 +32,7 @@ Then the object file is generated in `./target/release` directory.
 ### Conservation score 
 The conservation score is calculated based on JSD as follows: 
 
-
+![readme image 1](./image/conservation_jsd.png)
 
 where ***Pc*** is a site distribution, ***q*** is a background distribution, ***r = (Pc + q) / 2*** and ***RE*** is the Relative Entropy (RE). 
 
