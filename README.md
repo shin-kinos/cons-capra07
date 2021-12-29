@@ -47,7 +47,7 @@ This program supports two types of sequence weighting:
 ### Gap penalty 
 The gap penalties are given as follows:
 
-<img width="1440" alt="equation_seq_weighting" src="https://user-images.githubusercontent.com/83740080/140261784-a8acc7c0-95d6-48f1-9787-23b5d1d5aa9b.png">
+![readme image 2](./image/gap_penalty.png)
 
 where ***L*** is the length of a site (or number of the sequences in the MSA) and ***Wj*** is the weighting factor of sequence ***j***. The gap penalty of site ***i*** is given by calculating sum of weighting factors assigned to the gaps in sequence ***j***. 
 
@@ -98,7 +98,7 @@ Number`\t`Conservation score`\t`Composition of the site
 
 [e.g.] 
 
-<img width="939" alt="result" src="https://user-images.githubusercontent.com/83740080/140262519-1c379598-b429-42c9-a9b2-2599eb974f3f.png">
+![readme image 3](./image/result.png)
 
 ## References 
 1. Capra, John A., and Mona Singh. "Predicting functionally important residues from sequence conservation." Bioinformatics 23.15 (2007): 1875-1882.
