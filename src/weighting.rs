@@ -14,7 +14,7 @@ pub fn seq_weight(
 	/* Amino acid list for Position-Based mothod. */
 	unsafe {
 		SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect();
-		println!( "{:?}", SYMBOL );
+		//println!( "{:?}", SYMBOL );
 	}
 
 	if *arg_w == "va"  { weight_va( seq_list ) }
