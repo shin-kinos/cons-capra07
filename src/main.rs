@@ -1,6 +1,6 @@
 
 use std::time::Instant;
-use colored::*;
+//use colored::*;
 
 mod bgdistribution;
 mod entropy;
@@ -97,7 +97,7 @@ fn main() {
 		&( opts.output )
 	);
 
-	println!( "{}", "\nProgram completed !!!\n".green() );
+	println!( "{}", "\n\x1b[32;1mProgram completed !!!\x1b[0m\n" );
 
 	/* Elapsed time : End */
 	let end = start.elapsed();

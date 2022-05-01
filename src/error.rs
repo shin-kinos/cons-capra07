@@ -1,10 +1,10 @@
 
 use std::process;
-use colored::*;
+//use colored::*;
 
 pub fn error_bomb( arg : &str ) {
 
-	println!( "{}", "\n!!! ERROR !!!\n".red() );
+	println!( "{}", "\n\x1b[31;1m!!! ERROR !!!\x1b[0m\n" );
 
 	match arg {
 		"seq_title_not_same"    => println!( "Inadequate format in Multi-FASTA file." ),
@@ -15,7 +15,7 @@ pub fn error_bomb( arg : &str ) {
 		_                       => (),
 	}
 
-	println!( "{}", "\n!!! Program halted !!!\n".red() );
+	println!( "{}", "\n\x1b[31;1m!!! Program halted !!!\x1b[0m\n" );
 
 	process::exit( 1 );
 }

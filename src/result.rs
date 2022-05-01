@@ -1,8 +1,16 @@
 
 use std::fs::File;
 use std::io::Write;
-use colored::*;
+//use colored::*;
 use crate::error;
+
+static YELLOW  : &str = "\x1b[103;30m";
+static CYAN    : &str = "\x1b[106;30m";
+static GREEN   : &str = "\x1b[102;30m";
+static BLUE    : &str = "\x1b[104;30m";
+static RED     : &str = "\x1b[101;30m";
+static MAGENTA : &str = "\x1b[105;30m";
+static RESET   : &str = "\x1b[0m";
 
 pub fn show_result(
 	site_list         : &Vec<String>,
@@ -24,12 +32,12 @@ pub fn show_result(
 		println!( "{}",              "Negative (D, E)".on_truecolor(255,  37,  37).truecolor(0,   0,   0) );
 		println!( "{}", "Special conformations (G, P)".on_truecolor(255,   0, 255).truecolor(0,   0,   0) );
 		*/
-		println!( "{}", "Aliphatic (A, V, L, I, M, C)".on_yellow().black()  );
-		println!( "{}",        "Aromatic (F, W, Y, H)".on_cyan().black()    );
-		println!( "{}",           "Polar (S, T, N, Q)".on_green().black()   );
-		println!( "{}",              "Positive (K, R)".on_blue().black()    );
-		println!( "{}",              "Negative (D, E)".on_red().black()     );
-		println!( "{}", "Special conformations (G, P)".on_magenta().black() );
+		println!( "{}",  YELLOW.to_string()  + "Aliphatic (A, V, L, I, M, C)" + RESET );
+		println!( "{}",  CYAN.to_string()    + "Aromatic        (F, W, Y, H)" + RESET );
+		println!( "{}",  GREEN.to_string()   + "Polar           (S, T, N, Q)" + RESET );
+		println!( "{}",  BLUE.to_string()    + "Positive              (K, R)" + RESET );
+		println!( "{}",  RED.to_string()     + "Negative              (D, E)" + RESET );
+		println!( "{}",  MAGENTA.to_string() + "Special conformations (G, P)" + RESET );
 		println!( "" );
 
 		println!( "num\tcons\tsite" );
@@ -74,15 +82,15 @@ fn colorize( arg : &String ) {
 
 	for symbol in sequence.iter() {
 		match *symbol {
-			'A' | 'V' | 'L' | 'I' | 'M' | 'C' => print!( "{}", ( *symbol ).to_string().on_yellow().black()  ),
-			'F' | 'W' | 'Y' | 'H'             => print!( "{}", ( *symbol ).to_string().on_cyan().black()    ),
-			'S' | 'T' | 'N' | 'Q'             => print!( "{}", ( *symbol ).to_string().on_green().black()   ),
-			'K' | 'R'                         => print!( "{}", ( *symbol ).to_string().on_blue().black()    ),
-			'D' | 'E'                         => print!( "{}", ( *symbol ).to_string().on_red().black()     ),
-			'G' | 'P'                         => print!( "{}", ( *symbol ).to_string().on_magenta().black() ),
-			'B' | 'Z' | 'J' | 'O'             => print!( "{}", ( *symbol ).to_string().yellow()             ),
-			'X'                               => print!( "{}", ( *symbol ).to_string().red()                ),
-			_                                 => print!( "{}", ( *symbol ).to_string()                      ),
+			'A' | 'V' | 'L' | 'I' | 'M' | 'C' => print!( "{}", YELLOW.to_string()     + &( *symbol ).to_string() + RESET ), // .on_yellow().black() 
+			'F' | 'W' | 'Y' | 'H'             => print!( "{}", CYAN.to_string()       + &( *symbol ).to_string() + RESET ), // .on_cyan().black()   
+			'S' | 'T' | 'N' | 'Q'             => print!( "{}", GREEN.to_string()      + &( *symbol ).to_string() + RESET ), // .on_green().black()  
+			'K' | 'R'                         => print!( "{}", BLUE.to_string()       + &( *symbol ).to_string() + RESET ), // .on_blue().black()   
+			'D' | 'E'                         => print!( "{}", RED.to_string()        + &( *symbol ).to_string() + RESET ), // .on_red().black()    
+			'G' | 'P'                         => print!( "{}", MAGENTA.to_string()    + &( *symbol ).to_string() + RESET ), // .on_magenta().black()
+			'B' | 'Z' | 'J' | 'O'             => print!( "{}", "\x1b[93m".to_string() + &( *symbol ).to_string() + RESET ), // .yellow()            
+			'X'                               => print!( "{}", "\x1b[91m".to_string() + &( *symbol ).to_string() + RESET ), // .red()               
+			_                                 => print!( "{}",                           ( *symbol ).to_string()         ),
 		}
 	}
 }
