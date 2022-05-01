@@ -1,6 +1,8 @@
 # cons-capra07 
 A Rust program that calculates conservation score a site in a Multiple Sequence Alignment (MSA) using Jensen-Shannon divergence. 
 
+[![GitHub release](https://img.shields.io/badge/release-v1.0.0-brightgreen)]() [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-blue)]() [![GitHub twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fshin-kinos%2Fcons-capra07)]()
+
 ## Description 
 * This program scores residue conservation in each site on a MSA. 
 * The scoring measure is based on Jensen-Shannon divergence (JSD) applied by Capra and Singh [1]. 
