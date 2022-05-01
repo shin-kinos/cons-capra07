@@ -1,7 +1,7 @@
 # cons-capra07 
 A Rust program that calculates conservation score a site in a Multiple Sequence Alignment (MSA) using Jensen-Shannon divergence. 
 
-[![GitHub release](https://img.shields.io/badge/release-v1.1.0-brightgreen)]() [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-blue)](https://github.com/shin-kinos/cons-capra07/blob/main/LICENSE) 
+[![GitHub release](https://img.shields.io/badge/release-v1.1.0-brightgreen)](https://github.com/shin-kinos/cons-capra07/files/8598335/cons-capra07.zip) [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-blue)](https://github.com/shin-kinos/cons-capra07/blob/main/LICENSE) 
 
 ## Description 
 * This program scores residue conservation in each site on a MSA. 
@@ -12,10 +12,13 @@ A Rust program that calculates conservation score a site in a Multiple Sequence 
 
 * `colored` ( https://github.com/mackwic/colored ) 
 
+**Update 01/05/2022 : From `v1.1.0`, the crate `colored` is not required anymore.**
+
 ``` 
 [dependencies]
 colored = "2.0"
 ``` 
+
 
 ## Installation 
 
@@ -32,6 +35,7 @@ Then the object file is generated in `./target/release` directory.
 ## Scoring method 
 
 ### Conservation score 
+
 The conservation score is calculated based on JSD as follows: 
 
 ![readme image 1](./image/conservation_jsd.png)
