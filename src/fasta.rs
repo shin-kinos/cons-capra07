@@ -2,6 +2,7 @@
 use std::fs::read_to_string;
 
 use crate::error;
+use crate::error::ErrorType;
 
 pub struct Fasta {
 	pub title_list : Vec<String>,
@@ -55,20 +56,20 @@ impl Fasta {
 		let num_title : usize = ( self.title_list ).len();
 		let num_seq   : usize = ( self.seq_list   ).len();
 
-		/**/
+		/* Tolerate non-std residues or not. */
 		for i in 0 .. num_seq {
 			let sequence : &String = &( self.seq_list[ i ] );
 			if      *arg_t == "yes" { self.seq_list[ i ] = convert_to_gap( sequence, i + 1 ); }
 			else if *arg_t == "no"  { check_symbol( sequence, i + 1 ); }
 		}
 
-		/**/
-		if num_seq != num_title { error::error_bomb( "seq_title_not_same" ); }
+		/* Check the Multi FASTA format. */
+		if num_seq != num_title { error::error_bomb( ErrorType::SeqTitleNotSame ); }
 
-		/**/
+		/* Check the sequences are aligned. */
 		for i in 1 .. num_seq {
 			if ( self.seq_list[ 0 ] ).len() != ( self.seq_list[ i ] ).len() {
-				error::error_bomb( "seq_len_not_same" );
+				error::error_bomb( ErrorType::SeqLenNotSame );
 			}
 		}
 
@@ -138,13 +139,13 @@ fn check_symbol( sequence : &String, seq_order : usize ) {
 				println!( "\nFATAL :" );
 				println!( "Non-standard residue was observed in sequence {} : '{}'", seq_order, aa );
 				println!( "" );
-				error::error_bomb( "non_standard_residue" );
+				error::error_bomb( ErrorType::NonStandardResidue );
 			},
 			_ => {
 				println!( "\nFATAL :" );
 				println!( "Unexpected symbol was observed in sequence {} : '{}'", seq_order, aa );
 				println!( "" );
-				error::error_bomb( "unexpected_symbol" );
+				error::error_bomb( ErrorType::UnexpectedSymbol );
 			},
 		}
 	}

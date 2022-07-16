@@ -3,13 +3,14 @@ use std::fs::File;
 use std::io::Write;
 //use colored::*;
 use crate::error;
+use crate::error::ErrorType;
 
 static YELLOW  : &str = "\x1b[103;30m";
 static CYAN    : &str = "\x1b[106;30m";
 static GREEN   : &str = "\x1b[102;30m";
-static BLUE    : &str = "\x1b[104;30m";
-static RED     : &str = "\x1b[101;30m";
-static MAGENTA : &str = "\x1b[105;30m";
+static BLUE    : &str = "\x1b[104;37m";
+static RED     : &str = "\x1b[101;37m";
+static MAGENTA : &str = "\x1b[105;37m";
 static RESET   : &str = "\x1b[0m";
 
 pub fn show_result(
@@ -18,7 +19,7 @@ pub fn show_result(
 	arg_c             : &String
 ) {
 
-	if ( *site_list ).len() != ( *cons_capra07_list ).len() { error::error_bomb( "site_ent_len_not_same" ); }
+	if ( *site_list ).len() != ( *cons_capra07_list ).len() { error::error_bomb( ErrorType::SiteEntLenNotSame ); }
 
 	println!( "\nResult :\n" );
 
