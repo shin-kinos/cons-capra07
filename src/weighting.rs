@@ -2,13 +2,15 @@
 use std::collections::HashMap;
 use std::f64;
 
+use crate::options::WeightingMethod;
+
 /* Symbol frequency with gaps. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
 pub fn seq_weight(
 	seq_list  : &Vec<String>,
 	site_list : &Vec<String>,
-	arg_w     : &String
+	weight    : &WeightingMethod,
 ) -> Vec<f64> {
 
 	/* Amino acid list for Position-Based mothod. */
@@ -17,8 +19,12 @@ pub fn seq_weight(
 		//println!( "{:?}", SYMBOL );
 	}
 
-	if *arg_w == "va"  { weight_va( seq_list ) }
-	else               { weight_henikoff( site_list ) }
+	//if *arg_w == "va"  { weight_va( seq_list ) }
+	//else               { weight_henikoff( site_list ) }
+	match *weight {
+		WeightingMethod::PositionBased => weight_henikoff( site_list ),
+		WeightingMethod::DistanceBased => weight_va( seq_list ),
+	}
 
 }
 
@@ -35,10 +41,10 @@ fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64
 	let mut weight_list : Vec<f64> = vec![ 0.0; num_seq ];
 
 	/*
-	 * Calculate weighting factor using position based method ( Henikoff-Henikoff, 1994 ).
+	 * Calculate weighting factor using position based method ( Henikoff-Henikoff, 1994 ) as follows.
 	 * r             = Number of AA types in a site.
 	 * s             = Frequency of the AA in a site.
-	 * weight_factor = 1 / (r * s).
+	 * weight_factor = 1 / ( r * s ).
 	*/
 	for site in site_list.iter() {
 		//println!( "{}", *site );

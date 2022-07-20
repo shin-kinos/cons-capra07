@@ -3,6 +3,7 @@ use std::fs::read_to_string;
 
 use crate::error;
 use crate::error::ErrorType;
+use crate::options::Tolerate;
 
 pub struct Fasta {
 	pub title_list : Vec<String>,
@@ -51,7 +52,7 @@ impl Fasta {
 		( self.site_list  ).shrink_to_fit();
 	}
 
-	pub fn check_fasta_info( &mut self, arg_t : &String ) {
+	pub fn check_fasta_info( &mut self, tolerate : &Tolerate ) {
 
 		let num_title : usize = ( self.title_list ).len();
 		let num_seq   : usize = ( self.seq_list   ).len();
@@ -59,8 +60,10 @@ impl Fasta {
 		/* Tolerate non-std residues or not. */
 		for i in 0 .. num_seq {
 			let sequence : &String = &( self.seq_list[ i ] );
-			if      *arg_t == "yes" { self.seq_list[ i ] = convert_to_gap( sequence, i + 1 ); }
-			else if *arg_t == "no"  { check_symbol( sequence, i + 1 ); }
+			match *tolerate {
+				Tolerate::Yes => self.seq_list[ i ] = convert_to_gap( sequence, i + 1 ),
+				Tolerate::No  => check_symbol( sequence, i + 1 ),
+			}
 		}
 
 		/* Check the Multi FASTA format. */
@@ -80,7 +83,7 @@ impl Fasta {
 		let num_seq  : usize = ( self.seq_list ).len();
 		let num_site : usize = ( self.seq_list[ 0 ] ).to_string().len();
 
-		println!( "Number of the sequences : {}", num_seq );
+		println!( "Number of the sequences : {}", num_seq  );
 		println!( "Number of the sites     : {}", num_site );
 
 		let mut site : Vec<String> = Vec::new();

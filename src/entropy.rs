@@ -3,6 +3,7 @@ use std::collections::HashMap;
 use std::f64;
 
 use crate::bgdistribution;
+use crate::options::BgDist;
 //use crate::weighting::SYMBOL;
 
 /* Amino acid symbol list without gap. */
@@ -12,7 +13,7 @@ pub fn js_divergence(
 	site_list    : &Vec<String>,
 	weight_list  : &Vec<f64>,
 	gap_pen_list : &Vec<f64>,
-	arg_b        : &String
+	bgdist       : &BgDist
 ) -> Vec<f64> {
 
 	/* 20 amino acid symbols to calculate relative entropy, ignoring gaps. */
@@ -23,8 +24,8 @@ pub fn js_divergence(
 
 	let num_site : usize = ( *site_list ).len();
 
-	/* Define 'q' distribution ( background  distribution ) */
-	let q : HashMap<char, f64> = bgdistribution::define_bg_dist( arg_b );
+	/* Define 'q' distribution ( background  distribution ). */
+	let q : HashMap<char, f64> = bgdistribution::define_bg_dist( bgdist );
 
 	let mut js_dive_list : Vec<f64> = vec![ 0.0; num_site ];
 

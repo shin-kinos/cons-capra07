@@ -2,13 +2,44 @@
 use std::env;
 use std::process;
 
+#[ derive( Debug ) ]
+pub enum WeightingMethod {
+	PositionBased,
+	DistanceBased,
+}
+
+#[ derive( Debug ) ]
+pub enum Tolerate {
+	Yes,
+	No,
+}
+
+#[ derive( Debug ) ]
+pub enum BgDist {
+	Blosum62,
+	Swissprot,
+	Extra,
+	Membrane,
+	Intra,
+	Jtt,
+	Wag,
+	Lg,
+	Equal,
+}
+
+#[ derive( Debug ) ]
+pub enum Colorize {
+	Yes,
+	No,
+}
+
 pub struct Options {
 	pub input    : String,
 	pub output   : String,
-	pub weight   : String,
-	pub tolerate : String,
-	pub bgdist   : String,
-	pub colorize : String,
+	pub weight   : WeightingMethod,
+	pub tolerate : Tolerate,
+	pub bgdist   : BgDist,
+	pub colorize : Colorize,
 }
 
 impl Options {
@@ -41,41 +72,51 @@ impl Options {
 			i += 1;
 		}
 
+		let mut weight : WeightingMethod = WeightingMethod::PositionBased;
 		match ( *arg_w ).as_str() {
-			"hen" | "va" => (),
-			_            => show_usage( &argv[ 0 ] ),
+			"hen" => weight = WeightingMethod::PositionBased,
+			"va"  => weight = WeightingMethod::DistanceBased,
+			_     => show_usage( &argv[ 0 ] ),
 		}
 
+		let mut tolerate : Tolerate = Tolerate::Yes;
 		match ( *arg_t ).as_str() {
-			"yes" | "no" => (),
-			_            => show_usage( &argv[ 0 ] ),
+			"yes" => tolerate = Tolerate::Yes,
+			"no"  => tolerate = Tolerate::No,
+			_     => show_usage( &argv[ 0 ] ),
 		}
 
+		let mut bgdist : BgDist = BgDist::Blosum62;
 		match ( *arg_b ).as_str() {
-			"blosum62"  => (),
-			"swissprot" => (),
-			"extra"     => (),
-			"membrane"  => (),
-			"intra"     => (),
-			"jtt"       => (),
-			"wag"       => (),
-			"lg"        => (),
-			"equal"     => (),
+			"blosum62"  => bgdist = BgDist::Blosum62,
+			"swissprot" => bgdist = BgDist::Swissprot,
+			"extra"     => bgdist = BgDist::Extra,
+			"membrane"  => bgdist = BgDist::Membrane,
+			"intra"     => bgdist = BgDist::Intra,
+			"jtt"       => bgdist = BgDist::Jtt,
+			"wag"       => bgdist = BgDist::Wag,
+			"lg"        => bgdist = BgDist::Lg,
+			"equal"     => bgdist = BgDist::Equal,
 			_           => show_usage( &argv[ 0 ] ),
 		}
 
+		let mut colorize : Colorize = Colorize::No;
 		match ( *arg_c ).as_str() {
-			"yes" | "no" => (),
-			_            => show_usage( &argv[ 0 ] ),
+			"yes" => colorize = Colorize::Yes,
+			"no"  => colorize = Colorize::No,
+			_     => show_usage( &argv[ 0 ] ),
 		}
 
+		let input  : String = arg_i.to_string();
+		let output : String = arg_o.to_string();
+
 		Options {
-			input    : arg_i.to_string(),
-			output   : arg_o.to_string(),
-			weight   : arg_w.to_string(),
-			tolerate : arg_t.to_string(),
-			bgdist   : arg_b.to_string(),
-			colorize : arg_c.to_string(),
+			input    : input,
+			output   : output,
+			weight   : weight,
+			tolerate : tolerate,
+			bgdist   : bgdist,
+			colorize : colorize,
 		}
 	}
 
@@ -85,10 +126,10 @@ impl Options {
 		println!( "===========================================" );
 		println!( "Input filename    : {}", self.input          );
 		println!( "Onput filename    : {}", self.output         );
-		println!( "Weighting method  : {}", self.weight         );
-		println!( "Non-standard AA   : {}", self.tolerate       );
-		println!( "B.G. distribution : {}", self.bgdist         );
-		println!( "Colorize AA       : {}", self.colorize       );
+		println!( "Weighting method  : {:?}", self.weight       );
+		println!( "Non-standard AA   : {:?}", self.tolerate     );
+		println!( "B.G. distribution : {:?}", self.bgdist       );
+		println!( "Colorize AA       : {:?}", self.colorize     );
 		println!( "===========================================" );
 	}
 }
@@ -114,7 +155,14 @@ fn show_usage( arg : &String ) {
               wag       : WAG
               lg        : LG
               equal     : No background distribution with equal rate (= 0.05)" );
-	println!( "    -c    Colorize each AA displayed on the terminal based on their stereochemical properties ('yes' or 'no', default 'no')."  );
+	println!( "    -c    Colorize each AA displayed on the terminal based on their stereochemical properties ('yes' or 'no', default 'no').
+              The colour palette :
+                  \x1b[103;30m Aliphatic (A, V, L, I, M, C) \x1b[0m
+                  \x1b[106;30m Aromatic        (F, W, Y, H) \x1b[0m
+                  \x1b[102;30m Polar           (S, T, N, Q) \x1b[0m
+                  \x1b[104;37m Positive              (K, R) \x1b[0m
+                  \x1b[101;37m Negative              (D, E) \x1b[0m
+                  \x1b[105;30m Special conformations (G, P) \x1b[0m" );
 	println!( "    -h    Print this help, ignore all other arguments." );
 	println!( "\n" );
 
