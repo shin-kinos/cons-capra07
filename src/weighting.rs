@@ -7,25 +7,39 @@ use crate::options::WeightingMethod;
 /* Symbol frequency with gaps. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn seq_weight(
-	seq_list  : &Vec<String>,
-	site_list : &Vec<String>,
-	weight    : &WeightingMethod,
-) -> Vec<f64> {
+pub struct SequenceWeighting {
+	pub weight_list : Vec<f64>,
+}
 
-	/* Amino acid list for Position-Based mothod. */
-	unsafe {
-		SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect();
+impl SequenceWeighting {
+	pub fn new() -> SequenceWeighting {
+		let weight_list : Vec<f64> = Vec::new();
+
+		/* Amino acid list for Position-Based mothod. */
+		unsafe { SYMBOL = "ARNDCQEGHILKMFPSTWYV-".chars().collect(); }
 		//println!( "{:?}", SYMBOL );
+
+		SequenceWeighting {
+			weight_list : weight_list,
+		}
 	}
 
-	//if *arg_w == "va"  { weight_va( seq_list ) }
-	//else               { weight_henikoff( site_list ) }
-	match *weight {
-		WeightingMethod::PositionBased => weight_henikoff( site_list ),
-		WeightingMethod::DistanceBased => weight_va( seq_list ),
+	pub fn calc_weight_list(
+		&mut self,
+		seq_list      : &Vec<String>,
+		site_list     : &Vec<String>,
+		weight_method : &WeightingMethod,
+	) {
+		match *weight_method {
+			WeightingMethod::PositionBased => self.weight_list = weight_henikoff( site_list ),
+			WeightingMethod::DistanceBased => self.weight_list = weight_va( seq_list ),
+		}
 	}
 
+	pub fn show_sum_weight( &self ) {
+		let weight_sum : f64 = ( self.weight_list ).iter().sum();
+		println!( "\nSum of sequence weighting : {:.3}", weight_sum );
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -60,7 +74,7 @@ fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64
 		}
 	}
 
-	let mut sum_weight : f64 = 0.0;
+	//let mut sum_weight : f64 = 0.0;
 
 	/*
 	 * Get sequence weight by calculating mean of weighting factors in each sites.
@@ -69,10 +83,10 @@ fn weight_henikoff( site_list : &Vec<String> /*, arg_t : &String */ ) -> Vec<f64
 	for i in 0 .. weight_list.len() {
 		weight_list[ i ] = weight_list[ i ] / ( num_site as f64 );
 		//println!( "Weight of Sequence {} : {:.3}", i + 1, weight_list[ i ] );
-		sum_weight += weight_list[ i ];
+		//sum_weight += weight_list[ i ];
 	}
 
-	println!( "\nSum of sequence weighting : {:.3}", sum_weight );
+	//println!( "\nSum of sequence weighting : {:.3}", sum_weight );
 
 	weight_list.shrink_to_fit();
 
@@ -159,8 +173,8 @@ fn weight_va( seq_list : &Vec<String> ) -> Vec<f64> {
 	weight_list = normalize( &weight_list );
 	//println!( "Normalized weights : {:?}", weight_list );
 
-	let sum_norm_weight : f64 = ( weight_list ).iter().sum();
-	println!( "\nSum of sequence weighting : {:.3}", sum_norm_weight );
+	//let sum_norm_weight : f64 = ( weight_list ).iter().sum();
+	//println!( "\nSum of sequence weighting : {:.3}", sum_norm_weight );
 
 	weight_list.shrink_to_fit();
 

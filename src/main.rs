@@ -10,6 +10,7 @@ mod gap;
 mod options;
 mod result;
 mod weighting;
+mod window;
 
 fn main() {
 
@@ -33,6 +34,9 @@ fn main() {
 	/* Get site information as Vec<String>. */
 	data.get_site_list();
 
+	/* Check window size for moving average. */
+	window::check_window_size( opts.window, ( data.site_list ).len() );
+
 	/*
 	println!( "\nInputfile content :\n" );
 	for i in 0 .. ( data.seq_list ).len() {
@@ -48,52 +52,69 @@ fn main() {
 	}
 	*/
 
-	let weight_list : Vec<f64> = weighting::seq_weight(
+	/* Sequence weighting. */
+	let mut weighting = weighting::SequenceWeighting::new();
+	weighting.calc_weight_list(
 		&( data.seq_list  ),
 		&( data.site_list ),
 		&( opts.weight    )
 	);
 
+	weighting.show_sum_weight();
+
 	/*
 	println!( "\nSequence weighting :\n" );
-	for i in 0 .. weight_list.len() {
-		println!( "Weight of Sequence {} : {}", i + 1, weight_list[ i ] );
+	for i in 0 .. ( weighting.weight_list ).len() {
+		println!( "Weight of Sequence {} : {}", i + 1, ( weighting.weight_list )[ i ] );
 	}
 	*/
 
 	/* Calculate gap penalties taking acconut of sequence weighting. */
-	let gap_pen_list : Vec<f64> = gap::weight_gap_penalty( &( data.site_list ), &weight_list );
+	let mut gap = gap::GapPenalty::new();
+	gap.calc_gap_penalty( &( data.site_list ), &( weighting.weight_list ) );
 
 	/*
-	for i in 0 .. gap_pen_list.len() {
-		println!( "Gap penalty of site {} : {:.4}", i + 1, gap_pen_list[ i ] );
+	for i in 0 .. ( gap.gap_pen_list ).len() {
+		println!( "Gap penalty of site {} : {:.4}", i + 1, ( gap.gap_pen_list )[ i ] );
 	}
 	*/
 
-	let cons_capra07_list : Vec<f64> = entropy::js_divergence(
+	/* Calculate J.S. Divergence */
+	let mut entropy = entropy::JsDivergence::new();
+	entropy.calc_js_divergence(
 		&( data.site_list ),
-		&weight_list,
-		&gap_pen_list,
+		&( weighting.weight_list ),
+		&( gap.gap_pen_list ),
 		&( opts.bgdist )
 	);
 
 	/*
-	for i in 0 .. cons_capra07_list.len() {
-		println!( "Jensen-Shannon divergence site {} : {:.3}", i + 1, cons_capra07_list[ i ] );
+	for i in 0 .. ( entropy.cons_capra07_list ).len() {
+		println!( "Jensen-Shannon divergence site {} : {:.5}", i + 1, ( entropy.cons_capra07_list )[ i ] );
 	}
 	*/
+
+
+	if ( opts.window ) != 0 { entropy.cons_capra07_list = window::moving_average( &( entropy.cons_capra07_list ), opts.window ); }
+
+	/*
+	for i in 0 .. ( entropy.cons_capra07_list ).len() {
+		println!( "W-JS divergence site {} : {:.5}", i + 1, ( entropy.cons_capra07_list )[ i ] );
+	}
+	*/
+
 
 	/* Show result */
 	result::show_result(
 		&( data.site_list ),
-		&cons_capra07_list,
+		&( entropy.cons_capra07_list ),
 		&( opts.colorize )
 	);
 
 	/* Save result */
 	result::save_result(
 		&( data.site_list ),
-		&cons_capra07_list,
+		&( entropy.cons_capra07_list),
 		&( opts.output )
 	);
 

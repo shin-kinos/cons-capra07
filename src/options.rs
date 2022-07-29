@@ -40,6 +40,7 @@ pub struct Options {
 	pub tolerate : Tolerate,
 	pub bgdist   : BgDist,
 	pub colorize : Colorize,
+	pub window   : usize,
 }
 
 impl Options {
@@ -48,26 +49,28 @@ impl Options {
 		let argv : Vec<String> = env::args().collect();
 		let argc : usize = argv.len();
 
-		let mut arg_i : &String = &String::new();
-		let mut arg_o : &String = &String::new();
-		let mut arg_w : &String = &String::from( "hen"      );
-		let mut arg_t : &String = &String::from( "yes"      );
-		let mut arg_b : &String = &String::from( "blosum62" );
-		let mut arg_c : &String = &String::from( "no"       );
+		let mut arg_i  : &String = &String::new();
+		let mut arg_o  : &String = &String::new();
+		let mut arg_w  : &String = &String::from( "hen"      );
+		let mut arg_t  : &String = &String::from( "yes"      );
+		let mut arg_b  : &String = &String::from( "blosum62" );
+		let mut arg_c  : &String = &String::from( "no"       );
+		let mut arg_wi : &String = &String::from( "3"        );
 
 		if argc < 5 { show_usage( &argv[ 0 ] ) };
 
 		let mut i : usize = 1;
 		while i < argc {
 			match argv[ i ].as_str() {
-				"-i" => { i += 1; arg_i = &argv[ i ]; }
-				"-o" => { i += 1; arg_o = &argv[ i ]; }
-				"-w" => { i += 1; arg_w = &argv[ i ]; }
-				"-t" => { i += 1; arg_t = &argv[ i ]; }
-				"-b" => { i += 1; arg_b = &argv[ i ]; }
-				"-c" => { i += 1; arg_c = &argv[ i ]; }
-				"-h" => { show_usage( &argv[ 0 ] );   }
-				_    => { show_usage( &argv[ 0 ] );   }
+				"-i" | "--input"    => { i += 1; arg_i  = &argv[ i ]; }
+				"-o" | "--output"   => { i += 1; arg_o  = &argv[ i ]; }
+				"-w" | "--weight"   => { i += 1; arg_w  = &argv[ i ]; }
+				"-t" | "--tolerate" => { i += 1; arg_t  = &argv[ i ]; }
+				"-b" | "--bgdist"   => { i += 1; arg_b  = &argv[ i ]; }
+				"-c" | "--colorize" => { i += 1; arg_c  = &argv[ i ]; }
+				"-W" | "--window"   => { i += 1; arg_wi = &argv[ i ]; }
+				"-h" | "--help"     => { show_usage( &argv[ 0 ] );    }
+				_                   => { show_usage( &argv[ 0 ] );    }
 			}
 			i += 1;
 		}
@@ -107,6 +110,9 @@ impl Options {
 			_     => show_usage( &argv[ 0 ] ),
 		}
 
+		if !( *arg_wi ).parse::<usize>().is_ok() { show_usage( &argv[ 0 ] ); }
+		let window : usize = ( *arg_wi ).parse().unwrap();
+
 		let input  : String = arg_i.to_string();
 		let output : String = arg_o.to_string();
 
@@ -117,6 +123,7 @@ impl Options {
 			tolerate : tolerate,
 			bgdist   : bgdist,
 			colorize : colorize,
+			window   : window,
 		}
 	}
 
@@ -127,6 +134,7 @@ impl Options {
 		println!( "Input filename    : {}", self.input          );
 		println!( "Onput filename    : {}", self.output         );
 		println!( "Weighting method  : {:?}", self.weight       );
+		println!( "Window size       : {}", self.window         );
 		println!( "Non-standard AA   : {:?}", self.tolerate     );
 		println!( "B.G. distribution : {:?}", self.bgdist       );
 		println!( "Colorize AA       : {:?}", self.colorize     );
@@ -136,16 +144,17 @@ impl Options {
 
 fn show_usage( arg : &String ) {
 
-	println!( "Usage: {} [Options] \n\nOptions :\n\n", *arg );
-	println!( "    -i    Input filename in aligned Multi-FASTA format, REQUIRED." );
-	println!( "    -o    Onput filename, REQUIRED." );
-	println!( "    -w    Method of sequence weighting ('hen' or 'va', default 'hen').
+	println!( "\nUsage: {} [Options] \n\nOptions :\n\n", *arg );
+	println!( "    -i | --input   Input filename in aligned Multi-FASTA format, REQUIRED." );
+	println!( "    -o | --output  Onput filename, REQUIRED." );
+	println!( "    -w | --weight  Method of sequence weighting ('hen' or 'va', default 'hen').
               hen : Position-Based method by Henikoff and Henikoff
               va  : Distance-Based method by Vingron and Argos" );
-	println!( "    -t    Tolerate non-standard AA types (such as B, Z and X) in input file ('yes' or 'no', default 'yes').
+	println!( "    -W | --window  Window size around a site for moving average (int value, default 3, 0 not to adopt moving average )." );
+	println!( "    -t | --tolerate  Tolerate non-standard AA types (such as B, Z and X) in input file ('yes' or 'no', default 'yes').
               yes : All non-standard AAs are converted to gaps.
               no  : The program halts if the input file includes non-standard AA types." ); 
-	println!( "    -b    Back ground distribution in the relative entropy (default 'blosum62').
+	println!( "    -b | --bgdist  Back ground distribution in the relative entropy (default 'blosum62').
               blosum62  : BLOSUM62
               swissprot : Swiss-Prot
               extra     : AA composition in extracellular proteins
@@ -155,7 +164,7 @@ fn show_usage( arg : &String ) {
               wag       : WAG
               lg        : LG
               equal     : No background distribution with equal rate (= 0.05)" );
-	println!( "    -c    Colorize each AA displayed on the terminal based on their stereochemical properties ('yes' or 'no', default 'no').
+	println!( "    -c | --colorize  Colorize each AA displayed on the terminal based on their stereochemical properties ('yes' or 'no', default 'no').
               The colour palette :
                   \x1b[103;30m Aliphatic (A, V, L, I, M, C) \x1b[0m
                   \x1b[106;30m Aromatic        (F, W, Y, H) \x1b[0m
@@ -163,7 +172,7 @@ fn show_usage( arg : &String ) {
                   \x1b[104;37m Positive              (K, R) \x1b[0m
                   \x1b[101;37m Negative              (D, E) \x1b[0m
                   \x1b[105;30m Special conformations (G, P) \x1b[0m" );
-	println!( "    -h    Print this help, ignore all other arguments." );
+	println!( "    -h | --help  Print this help, ignore all other arguments." );
 	println!( "\n" );
 
 	process::exit( 1 );

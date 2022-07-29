@@ -1,21 +1,40 @@
 
-pub fn weight_gap_penalty( site_list : &Vec<String>, weight_list : &Vec<f64> ) -> Vec<f64> {
+pub struct GapPenalty {
+	pub gap_pen_list : Vec<f64>,
+}
 
-	let num_site : usize = ( *site_list ).len();
-	let mut gap_pen_list : Vec<f64> = vec![ 0.0; num_site ];
+impl GapPenalty {
+	pub fn new() -> GapPenalty {
 
-	/*
-	 * Calculate simple gap penalties taking accont of sequence weighting.
-	 * num_site = Number of the site
-	 * site     = A site
-	 * gap_pen_list = A list of gap penalties
-	*/
-	for i in 0 .. num_site {
-		let site : &String = &( ( *site_list )[ i ] );
-		gap_pen_list[ i ] = gap_penalty( site, weight_list );
+		let gap_pen_list : Vec<f64> = Vec::new();
+
+		GapPenalty {
+			gap_pen_list : gap_pen_list,
+		}
 	}
 
-	gap_pen_list
+	pub fn calc_gap_penalty(
+		&mut self,
+		site_list   : &Vec<String>,
+		weight_list : &Vec<f64>,
+	) {
+
+		let num_site : usize = ( *site_list ).len();
+		self.gap_pen_list    = vec![ 0.0; num_site ];
+
+		/*
+		 * Calculate simple gap penalties taking accont of sequence weighting.
+		 * num_site = Number of the site
+		 * site     = A site
+		 * gap_pen_list = A list of gap penalties
+		*/
+		for i in 0 .. num_site {
+			let site : &String = &( ( *site_list )[ i ] );
+			( self.gap_pen_list )[ i ] = gap_penalty( site, weight_list );
+		}
+
+		( self.gap_pen_list ).shrink_to_fit();
+	}
 }
 
 fn gap_penalty( site : &String, weight_list : &Vec<f64> ) -> f64 {

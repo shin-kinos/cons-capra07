@@ -8,6 +8,7 @@ pub enum ErrorType {
 	SiteEntLenNotSame,
 	NonStandardResidue,
 	UnexpectedSymbol,
+	TooLargeWindowSize,
 }
 
 pub fn error_bomb( error_type : ErrorType ) {
@@ -20,6 +21,7 @@ pub fn error_bomb( error_type : ErrorType ) {
 		ErrorType::SiteEntLenNotSame  => println!( "Length of ( *site_list ) != Length of ( *cons_re_list )" ),
 		ErrorType::NonStandardResidue => println!( "Non-standard residue was observed in the input file." ),
 		ErrorType::UnexpectedSymbol   => println!( "Unexpected symbol was observed in the input file." ),
+		ErrorType::TooLargeWindowSize => println!( "The window size is too large." ),
 	}
 
 	println!( "{}", "\n\x1b[31;1m!!! Program halted !!!\x1b[0m\n" );

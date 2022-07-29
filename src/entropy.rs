@@ -9,35 +9,48 @@ use crate::options::BgDist;
 /* Amino acid symbol list without gap. */
 static mut SYMBOL : Vec<char> = Vec::new();
 
-pub fn js_divergence(
-	site_list    : &Vec<String>,
-	weight_list  : &Vec<f64>,
-	gap_pen_list : &Vec<f64>,
-	bgdist       : &BgDist
-) -> Vec<f64> {
-
-	/* 20 amino acid symbols to calculate relative entropy, ignoring gaps. */
-	unsafe {
-		SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect();
-		//println!( "{:?}", SYMBOL );
-	}
-
-	let num_site : usize = ( *site_list ).len();
-
-	/* Define 'q' distribution ( background  distribution ). */
-	let q : HashMap<char, f64> = bgdistribution::define_bg_dist( bgdist );
-
-	let mut js_dive_list : Vec<f64> = vec![ 0.0; num_site ];
-
-	for i in 0 .. num_site {
-		let js_dive : f64 = calc_js_dive( &( *site_list )[ i ], weight_list, ( *gap_pen_list )[ i ], &q );
-		js_dive_list[ i ] += js_dive;
-	}
-
-	js_dive_list
+pub struct JsDivergence {
+	pub cons_capra07_list : Vec<f64>,
 }
 
-fn calc_js_dive(
+impl JsDivergence {
+	pub fn new() -> JsDivergence {
+
+		let cons_capra07_list : Vec<f64> = Vec::new();
+
+		/* 20 amino acid symbols to calculate relative entropy, ignoring gaps. */
+		unsafe { SYMBOL = "ARNDCQEGHILKMFPSTWYV".chars().collect(); }
+		//println!( "{:?}", SYMBOL );
+
+		JsDivergence {
+			cons_capra07_list : cons_capra07_list,
+		}
+	}
+
+	pub fn calc_js_divergence(
+		&mut self,
+		site_list    : &Vec<String>,
+		weight_list  : &Vec<f64>,
+		gap_pen_list : &Vec<f64>,
+		bgdist       : &BgDist
+	) {
+		let num_site : usize = ( *site_list ).len();
+
+		/* Define 'q' distribution ( background  distribution ). */
+		let q : HashMap<char, f64> = bgdistribution::define_bg_dist( bgdist );
+
+		self.cons_capra07_list = vec![ 0.0; num_site ];
+		for i in 0 .. num_site {
+			let js_dive : f64 = js_dive( &( *site_list )[ i ], weight_list, ( *gap_pen_list )[ i ], &q );
+			( self.cons_capra07_list )[ i ] += js_dive;
+		}
+
+		( self.cons_capra07_list ).shrink_to_fit();
+
+	}
+}
+
+fn js_dive(
 	site_arg    : &String,
 	weight_list : &Vec<f64>,
 	gap_penalty : f64,
