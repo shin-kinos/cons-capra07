@@ -104,7 +104,7 @@ Number`\t`Conservation score`\t`Composition of the site
 
 [e.g.] 
 
-![readme image 3](./image/result.png)
+![readme image 3](./image/result.jpg)
 
 ## References 
 1. Capra, John A., and Mona Singh. "Predicting functionally important residues from sequence conservation." Bioinformatics 23.15 (2007): 1875-1882.
