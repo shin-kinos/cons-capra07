@@ -1,7 +1,7 @@
 # cons-capra07 
 A Rust program that calculates conservation score a site in a Multiple Sequence Alignment (MSA) using Jensen-Shannon divergence. 
 
-[![GitHub release](https://img.shields.io/badge/release-v1.1.2-brightgreen)](https://github.com/shin-kinos/cons-capra07/releases/tag/v1.1.1) [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-blue)](https://github.com/shin-kinos/cons-capra07/blob/main/LICENSE) 
+[![GitHub release](https://img.shields.io/badge/release-v1.2.0-brightgreen)](https://github.com/shin-kinos/cons-capra07/releases/tag/v1.2.0) [![GitHub license](https://img.shields.io/badge/LICENSE-MIT-blue)](https://github.com/shin-kinos/cons-capra07/blob/main/LICENSE) 
 
 ## Description 
 * This program scores residue conservation in each site on a MSA. 
@@ -38,7 +38,7 @@ Then the object file is generated in `./target/release` directory.
 
 The conservation score is calculated based on JSD as follows: 
 
-![readme image 1](./image/conservation_jsd.png)
+![readme image 1](./image/conservation_jsd.jpg)
 
 where ***Pc*** is a site distribution, ***q*** is a background distribution, ***r = (Pc + q) / 2*** and ***RE*** is the Relative Entropy (RE). 
 
@@ -53,12 +53,11 @@ This program supports two types of sequence weighting:
 ### Gap penalty 
 The gap penalties are given as follows:
 
-![readme image 2](./image/gap_penalty.png)
+![readme image 2](./image/gap_penalty.jpg)
 
 where ***L*** is the length of a site (or number of the sequences in the MSA) and ***Wj*** is the weighting factor of sequence ***j***. The gap penalty of site ***i*** is given by calculating sum of weighting factors assigned to the gaps in sequence ***j***. 
 
 ### Background distribution 
-
 The RE requires a background distribution. In this program, there are nine background distributions you can choose: 
 
 1. BLOSUM62 [4] 
@@ -71,7 +70,14 @@ The RE requires a background distribution. In this program, there are nine backg
 8. LG [8] 
 9. Non-biassed distribution (equal rate at 0.05)  
 
-Gaps are ignored as well as site distributions.  
+Gaps are ignored as well as site distributions. 
+
+### Incorporating sequential neighboring residues. 
+To take scores of neighboring residues in a sequence into account, the window score can be considered as moving average below: 
+
+![read me image 3](./image/window_score.jpg) 
+
+where ***window*** represents the number of the neighboring sites on either side of site ***C***. And ***Sc*** and ***Si*** are conservation scores of each site. 
 
 ## Input file format
 Aligned Multi-FASTA format of amino acid sequences. 
@@ -89,7 +95,9 @@ Major arguments:
 
 `-w` : Method of sequence weighting ( "hen" or "va", default "hen" ).
 
-`-b` : Background distribution (default "blosum62").
+`-b` : Background distribution (default "blosum62").　
+
+`-W` : Window size ( "Int num", default 3 ).
 
 [e. g.]
 
