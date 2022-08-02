@@ -38,7 +38,7 @@ Then the object file is generated in `./target/release` directory.
 
 The conservation score is calculated based on JSD as follows: 
 
-![readme image 1](./image/conservation_jsd.jpg)
+![readme image 1](image/conservation_jsd.jpg)
 
 where ***Pc*** is a site distribution, ***q*** is a background distribution, ***r = (Pc + q) / 2*** and ***RE*** is the Relative Entropy (RE). 
 
@@ -53,7 +53,7 @@ This program supports two types of sequence weighting:
 ### Gap penalty 
 The gap penalties are given as follows:
 
-![readme image 2](./image/gap_penalty.jpg)
+![readme image 2](image/gap_penalty.jpg)
 
 where ***L*** is the length of a site (or number of the sequences in the MSA) and ***Wj*** is the weighting factor of sequence ***j***. The gap penalty of site ***i*** is given by calculating sum of weighting factors assigned to the gaps in sequence ***j***. 
 
@@ -75,7 +75,7 @@ Gaps are ignored as well as site distributions.
 ### Incorporating sequential neighboring residues. 
 To take scores of neighboring residues in a sequence into account, the window score can be considered as moving average below: 
 
-![read me image 3](./image/window_score.jpg) 
+![read me image 3](image/window_score.jpg) 
 
 where ***window*** represents the number of the neighboring sites on either side of site ***C***. And ***Sc*** and ***Si*** are conservation scores of each site. 
 
@@ -112,7 +112,7 @@ Number`\t`Conservation score`\t`Composition of the site
 
 [e.g.] 
 
-![readme image 3](./image/result.jpg)
+![readme image 4](image/result.jpg)
 
 ## References 
 1. Capra, John A., and Mona Singh. "Predicting functionally important residues from sequence conservation." Bioinformatics 23.15 (2007): 1875-1882.
